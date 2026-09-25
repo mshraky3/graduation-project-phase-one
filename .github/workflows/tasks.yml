@@ -1,0 +1,122 @@
+name: Task sign-up
+
+# Handles the commands team members type as issue comments:
+#   /register Full Name   (on the "Team registration" issue)
+#   /claim                (on a task issue)
+#   /unclaim              (on a task issue you own)
+# Runs one at a time, so two people claiming the same task can never both win.
+
+on:
+  issue_comment:
+    types: [created]
+  issues:
+    types: [assigned]
+
+concurrency:
+  group: task-signup
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+
+jobs:
+  handle:
+    if: ${{ !github.event.issue.pull_request }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const MAX_POINTS = 15;
+            const POINTS = { 'size:S': 1, 'size:M': 2, 'size:L': 3 };
+            const { owner, repo } = context.repo;
+            const issue = context.payload.issue;
+            const labels = issue.labels.map(l => l.name);
+            const pointsOf = iss => iss.labels.map(l => POINTS[l.name] || 0).reduce((a, b) => a + b, 0);
+            const reply = body => github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body });
+
+            // Someone assigned themselves from the sidebar instead of commenting /claim:
+            // keep only the first assignee so a task never has two owners.
+            if (context.eventName === 'issues') {
+              if (!labels.includes('task')) return;
+              const fresh = await github.rest.issues.get({ owner, repo, issue_number: issue.number });
+              const assignees = fresh.data.assignees.map(a => a.login);
+              if (assignees.length > 1) {
+                const added = context.payload.assignee.login;
+                await github.rest.issues.removeAssignees({ owner, repo, issue_number: issue.number, assignees: [added] });
+                await reply(`@${added} this task already belongs to @${assignees.find(a => a !== added)}, so your assignment was removed.`);
+              }
+              return;
+            }
+
+            const comment = context.payload.comment;
+            const user = comment.user.login;
+            const text = comment.body.trim();
+            const react = content => github.rest.reactions.createForIssueComment({ owner, repo, comment_id: comment.id, content });
+
+            if (labels.includes('registration')) {
+              if (!/^\/register\s+\S/i.test(text)) return;
+              await react('+1');
+              return;
+            }
+
+            if (!labels.includes('task')) return;
+            const cmd = text.split(/\s+/)[0].toLowerCase();
+            if (cmd !== '/claim' && cmd !== '/unclaim') return;
+
+            const current = issue.assignees.map(a => a.login);
+
+            if (cmd === '/unclaim') {
+              if (!current.includes(user)) {
+                await reply(`@${user} you don't own this task, so there is nothing to release.`);
+                return;
+              }
+              await github.rest.issues.removeAssignees({ owner, repo, issue_number: issue.number, assignees: [user] });
+              await react('+1');
+              await reply(`@${user} released this task. It is open again.`);
+              return;
+            }
+
+            // /claim: must be registered first.
+            const reg = await github.rest.issues.listForRepo({ owner, repo, labels: 'registration', state: 'all' });
+            let registered = false;
+            if (reg.data.length) {
+              const regComments = await github.paginate(github.rest.issues.listComments, { owner, repo, issue_number: reg.data[0].number, per_page: 100 });
+              registered = regComments.some(c => c.user.login === user && /^\/register\s+\S/i.test(c.body.trim()));
+            }
+            if (!registered) {
+              const link = reg.data.length ? reg.data[0].html_url : 'the Team registration issue';
+              await reply(`@${user} please register first: comment \`/register Your Full Name\` on ${link}, then comment \`/claim\` here again.`);
+              return;
+            }
+
+            if (current.includes(user)) {
+              await reply(`@${user} this task is already yours.`);
+              return;
+            }
+            if (current.length) {
+              await reply(`@${user} sorry, this task was already taken by @${current[0]}. Pick another open task on the board.`);
+              return;
+            }
+
+            const mine = await github.paginate(github.rest.issues.listForRepo, { owner, repo, labels: 'task', assignee: user, state: 'all', per_page: 100 });
+            const used = mine.reduce((sum, iss) => sum + pointsOf(iss), 0);
+            const cost = pointsOf(issue);
+            if (used + cost > MAX_POINTS) {
+              await reply(`@${user} this task is ${cost} point(s) and you already have ${used} of ${MAX_POINTS}. Release a task with \`/unclaim\` first if you want this one.`);
+              return;
+            }
+
+            try {
+              await github.rest.issues.addAssignees({ owner, repo, issue_number: issue.number, assignees: [user] });
+            } catch (e) {
+              await reply(`@${user} I couldn't assign you. Make sure you've accepted the collaborator invitation to this repository, then comment \`/claim\` again.`);
+              return;
+            }
+            const check = await github.rest.issues.get({ owner, repo, issue_number: issue.number });
+            if (!check.data.assignees.some(a => a.login === user)) {
+              await reply(`@${user} I couldn't assign you. Make sure you've accepted the collaborator invitation to this repository, then comment \`/claim\` again.`);
+              return;
+            }
+            await react('rocket');
+            await reply(`@${user} this task is yours. You now have ${used + cost} of ${MAX_POINTS} points.`);
