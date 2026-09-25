@@ -21,16 +21,8 @@ Analysis and design only; no code is delivered in this phase. The report follows
 3. Problem Analysis
 4. System Design
 
-## Picking your tasks
-👉 **Task board:** https://mshraky3.github.io/graduation-project-phase-one/
-
-1. Accept the collaborator invitation to this repository.
-2. Comment `/register Your Full Name` on the **Team registration** issue.
-3. Open a task issue and comment `/claim`. To give it back, comment `/unclaim`.
-
-Each person can hold up to 15 points (S = 1, M = 2, L = 3). A task has exactly one owner, and the first valid claim wins.
-
-The full breakdown is also in [docs/planning/Phase1_Task_Breakdown.pdf](docs/planning/Phase1_Task_Breakdown.pdf).
+## Tasks
+All Phase 1 tasks and their points are in [docs/planning/Phase1_Task_Breakdown.pdf](docs/planning/Phase1_Task_Breakdown.pdf). Each member takes about 18 points (91 in total) and sends their chosen task IDs to the team lead.
 
 ## Repository layout
 | Folder | Contents |
