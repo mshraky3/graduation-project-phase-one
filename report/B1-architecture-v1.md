@@ -1,6 +1,7 @@
 # B1: System architecture (v1, draft for M1)
 
-Owner: Mahmoud. Status: v1 draft, 13 Oct 2026. Replaces `B1-architecture-v0.md`. Final due Wed 21 Oct; milestone M1 is Thu 22 Oct, together with B6 (Ali).
+Owner: Mahmoud. Status: v1 draft, 13 Oct 2026. Replaces `B1-architecture-v0.md`. Final due Wed 21 Oct; milestone M1 is Thu 22 Oct, together with B6 (Ali). Phase 1 deadline: Sun 15 Nov 2026.
+Phase 1 is analysis and design only: no code. Everything here is a decision or a design written for the report.
 This document names the parts of the system and the rules between them. It does **not** choose technologies (that is B6). Where a choice by someone else changes the picture, it is listed in "Open decisions" with who settles it and what this architecture assumes until then.
 
 ## The idea in one sentence
@@ -72,19 +73,19 @@ Reading the diagram: a request goes down (UI, feature, communication layer) and 
 
 | # | Decision | Settled by | When | Assumed meanwhile |
 |---|---|---|---|---|
-| 1 | Platforms (iOS, Android, Windows, Linux, macOS) | Professor, then B6 | professor answer; B6 v0 15 Oct | Design is platform-neutral; every feature says its limits per OS |
+| 1 | Platforms (iOS, Android, Windows, Linux, macOS) | **Settled** by Mahmoud, 13 Oct: all platforms. B6 confirms the list | B6 v0 15 Oct | The design covers all of them; every feature says its limits per OS |
 | 2 | One cross-platform app or native apps per platform | B6 (Ali) | 15 Oct v0, 22 Oct final | Behaviour is identical on all devices, so the architecture holds either way |
 | 3 | Communication library and protocol. Must give: discovery, mutual authentication with device keys, encrypted channels, and the three channel types | B6 with C1 | 22 Oct | Sockets-level behaviour only; no library named |
 | 4 | AI model and runtime, and the minimum hardware for the AI role. Which similarity method (hash only, image fingerprints, embeddings) | B6 with C2 and C4 | 22 Oct | One AI role, on a laptop or PC; phones do not take it |
 | 5 | Local storage technology on each platform, and how the vault is protected | B6 with C3, C7, C11 | 22 Oct | One embedded database per device |
-| 6 | Pairing method and trust model (QR, code comparison, what pairing grants, how a third and fourth device join) | C1 (Mahmoud) | draft 5 Nov | Each device has a key pair; the trusted list holds public keys |
-| 7 | How the AI device is chosen and replaced, and what happens to its similarity data | C2 (Mohammed) | draft 5 Nov | User picks it; the app suggests the strongest device |
-| 8 | Where file indexes live: every device keeps a copy of the others' last known index, or only the AI device does. Size limits | C3 (Mohammed) with C5 | 12 Nov | Every device keeps copies (as in v0) |
-| 9 | Which device keeps a duplicate, and who deletes | C4 (Ali) | draft 5 Nov | Nothing is deleted without the user's confirmation, and always by the device that owns the file |
-| 10 | Transport for live streams (screen, extra screen) and bulk files: same secure channel or separate | C6, C9, C10 with B6 | 12 Nov | Separate channel types over the same trust |
-| 11 | Encryption of data in transit and at rest, permissions per feature, vault sync, lost-device rule | C11 (Ali) with C1, C7 | 19 Nov (see board question on C11 vs M2) | Everything in transit is encrypted; vault never leaves the device unencrypted |
+| 6 | Pairing method and trust model (QR, code comparison, what pairing grants, how a third and fourth device join) | C1 (Mahmoud) | draft 25 Oct, final 29 Oct | Each device has a key pair; the trusted list holds public keys |
+| 7 | How the AI device is chosen and replaced, and what happens to its similarity data | C2 (Mohammed) | draft 25 Oct, final 29 Oct | User picks it; the app suggests the strongest device |
+| 8 | Where file indexes live: every device keeps a copy of the others' last known index, or only the AI device does. Size limits | C3 (Mohammed) with C5 | 29 Oct | Every device keeps copies (as in v0) |
+| 9 | Which device keeps a duplicate, and who deletes | C4 (Ali) | draft 25 Oct, final 29 Oct | Nothing is deleted without the user's confirmation, and always by the device that owns the file |
+| 10 | Transport for live streams (screen, extra screen) and bulk files: same secure channel or separate | C6, C9, C10 with B6 | 29 Oct (C9), 5 Nov (C6, C10) | Separate channel types over the same trust |
+| 11 | Encryption of data in transit and at rest, permissions per feature, vault sync, lost-device rule | C11 (Ali) with C1, C7 | 5 Nov | Everything in transit is encrypted; vault never leaves the device unencrypted |
 | 12 | Phones and tablets in the background: can the app still answer other devices? Affects offline records and discovery | B6, C3, C10 | 22 Oct; verify, do not assume | Phone and tablet are fully reachable only while the app is open |
-| 13 | Scope: C7 passwords, C9 screen sharing, C10 extra screen as design only in Phase 1 | Professor | asked, not answered | All three stay in the diagram; remove a module if it is dropped |
+| 13 | Scope: C7 passwords, C9 screen sharing, C10 extra screen as design only in Phase 1 | **Settled** by Mahmoud, 13 Oct: all three stay, as design only | done | All three stay in the diagram |
 
 ## What B6 has to settle for B1 to be final (Thu 22 Oct)
-Decisions 1 to 5 and 12. If B6 v0 (15 Oct) leaves any of them open, B1 final will say so rather than guess.
+Decisions 2 to 5 and 12 (decision 1 is answered; B6 confirms the platform list). If B6 v0 (15 Oct) leaves any of them open, B1 final will say so rather than guess.
