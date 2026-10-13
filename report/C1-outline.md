@@ -1,11 +1,11 @@
 # C1: Device discovery, pairing and trust (outline)
 
-Owner: Mahmoud. Status: outline, 13 Oct 2026. Work starts Sun 18 Oct; draft Thu 5 Nov; final Thu 12 Nov (milestone M2).
+Owner: Mahmoud. Status: outline, 13 Oct 2026. Work starts Sun 18 Oct; draft Sun 25 Oct; final Thu 29 Oct (milestone M2, core designs). Phase 1 deadline: Sun 15 Nov. Phase 1 is design only: no code.
 This is the plan for the design, not the design. It lists the questions C1 must answer, what three existing systems do (with sources), and the sequence diagrams to draw. Names follow `B1-architecture-v1.md` (device app, core services, communication layer, local storage).
 
 ## What C1 covers, and what it leaves to others
 - **C1:** how a device is identified, how devices find each other, how a new device joins (pairing), what "trusted" means, and how trust ends.
-- **C11 (Ali):** encryption of the channel, permissions per feature, where data is stored, lost-device protection. C1 supplies the identity and the "remove this device" mechanism; C11 builds on them. The boundary must be agreed with Ali before 5 Nov.
+- **C11 (Ali):** encryption of the channel, permissions per feature, where data is stored, lost-device protection. C1 supplies the identity and the "remove this device" mechanism; C11 builds on them. The boundary must be agreed with Ali before 25 Oct.
 - **C2 (Mohammed):** the AI role. C1 only carries each device's capabilities (for example "can host the AI role") in the device registry.
 - **B6 (Ali):** communication library and platforms. C1's design must be possible with the library B6 picks.
 
@@ -96,10 +96,11 @@ sequenceDiagram
 ```
 
 ## Plan and dependencies
-- **18-24 Oct:** answer questions 1-8 on paper; read KDE Connect's protocol page in full; agree the C1/C11 boundary with Ali; check B6's communication library against the questions (can it do discovery, key-based authentication, three channel types?). Needs B6 v0 (15 Oct) and the professor's answer on platforms.
-- **25 Oct-1 Nov:** decide pairing method and trust model (questions 6-11); draw S1 and S2. Light week around the 28 Oct midterm.
-- **2-5 Nov:** S3 and S4, requirements list, draft. Midterms on 8 Nov: leave the 8-12 Nov week for review and fixes only.
-- **Needs from others:** capabilities list from Mohammed (C2) and Ahmed (C9, C10); trusted-device and key fields to Mohammed for B5; the C6 owner (Samer) needs "trusted device" before 1 Nov; C11 (Ali) needs C1 by 8 Nov.
+All on paper: documents and diagrams, no code. Platforms: all (decided 13 Oct).
+- **18-22 Oct:** answer questions 1-8; read KDE Connect's protocol page in full; agree the C1/C11 boundary with Ali; check B6's communication choice against the questions (can it do discovery, key-based authentication, three channel types?). Needs B6 v0 (15 Oct).
+- **Sun 25 Oct (draft):** pairing method and trust model decided (questions 6-11); sequence diagrams S1 and S2 drawn.
+- **Thu 29 Oct (final):** S3 and S4, requirements list, final text.
+- **Needs from others:** capabilities list from Mohammed (C2) and Ahmed (C9, C10); trusted-device and key fields to Mohammed for B5; the C6 owner (Samer) needs "trusted device" when C6 starts on 25 Oct; C11 (Ali) starts 1 Nov and needs the final C1.
 
 ## Sources
 1. KDE Connect protocol (device discovery, connection, pairing): https://invent.kde.org/network/kdeconnect-meta/-/raw/master/protocol.md
