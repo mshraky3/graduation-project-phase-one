@@ -1,6 +1,6 @@
 # B1: System architecture (v1, draft for M1)
 
-Owner: Mahmoud. Status: v1 draft, 13 Oct 2026. Replaces `B1-architecture-v0.md`. Final due Wed 21 Oct; milestone M1 is Thu 22 Oct, together with B6 (Ali). Phase 1 deadline: Sun 15 Nov 2026.
+Owner: Mahmoud. Status: v1, confirmed by Mahmoud on 17 Oct 2026 (idea, six parts, six rules, failure table, and every "Assumed meanwhile" entry below). It becomes final when B6 (Ali) settles decisions 2 to 5 and 12. Written 13 Oct 2026. Replaces `B1-architecture-v0.md`. Final due Wed 21 Oct; milestone M1 is Thu 22 Oct, together with B6 (Ali). Phase 1 deadline: Sun 15 Nov 2026.
 Phase 1 is analysis and design only: no code. Everything here is a decision or a design written for the report.
 This document names the parts of the system and the rules between them. It does **not** choose technologies (that is B6). Where a choice by someone else changes the picture, it is listed in "Open decisions" with who settles it and what this architecture assumes until then.
 
