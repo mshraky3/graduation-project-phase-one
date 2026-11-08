@@ -98,5 +98,5 @@ The qualities the whole app must have, in the eight areas of the task card: priv
 2. Mohammed, `C2-ai-node.md` Q1 to Q3, `C3-file-indexing.md` §1, §5, §6, `C5-unified-search.md` §2, §3, §8, §9 (on main).
 3. Ali, `B6-technology-final.md` choices 1 to 6, points 2 and 5, section 4 (pull request 42); `C4-duplicate-detection.md` §2, §6, §8 (pull request 43); `C7-password-management.md` §2, §9 (pull request 48); `C11-security-privacy.md` §4, §7 (pull request 49).
 4. Samer, `research/C6-file-sharing.md` §3, §8 (on main).
-5. Ahmed, `C8-clipboard-sync.md` (branch `c8-final`, pull request 39); `C9-screen-sharing.md` §6 and `C10-extra-screen.md` §3, §4, §7 (round-3 drafts, not pushed).
+5. Ahmed, `C8-clipboard-sync.md` (branch `c8-final`, pull request 39); `C9-screen-sharing.md` §6 (branch `c9-final`) and `C10-extra-screen.md` §3, §4, §7 (branch `c10-extra-screen`).
 6. Mahmoud, round-3 task card (PDF, 3 Nov 2026), part B item 2.

@@ -1,7 +1,7 @@
 # A8: Functional requirements (first version)
 
 Owner: Ahmed. Status: first version, 8 Nov 2026. Chapter 3 of the report. Phase 1 is design only: no code.
-Collected from the requirement lists of C1, C3, C4, C5, C6, C7, C8, C9, C10 and C11, and from the text of C2 (C2 has no list). **C9 final and C10 are drafts in review** (not pushed yet): their rows will be rechecked when they are pushed. 78 requirements in total. Names follow `B1-architecture-v2.md`.
+Collected from the requirement lists of C1, C3, C4, C5, C6, C7, C8, C9, C10 and C11, and from the text of C2 (C2 has no list). C9 final (branch `c9-final`) and C10 (branch `c10-extra-screen`) are on GitHub, not yet merged. 78 requirements in total. Names follow `B1-architecture-v2.md`.
 **[PROPOSAL]** = a design choice or number still to be agreed or tuned. **not checked** = not confirmed in a primary source or by a test.
 
 ## How this list was made
@@ -124,7 +124,7 @@ C2 has no requirement list; these lines are taken from its answers Q1 to Q3 and 
 
 ## 10. Screen sharing and remote control (C9)
 
-From the C9 final draft, section 6 (17 items, in the project folder, rechecked after its review on 8 Nov; not yet pushed). C9-1 is merged into FR-2, C9-2 (trusted) into FR-1, C9-5 into FR-3, C9-14 into A9 NFR-2.
+From the C9 final draft, section 6 (17 items, branch `c9-final`, read 8 Nov). C9-1 is merged into FR-2, C9-2 (trusted) into FR-1, C9-5 into FR-3, C9-14 into A9 NFR-2.
 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
@@ -138,7 +138,7 @@ From the C9 final draft, section 6 (17 items, in the project folder, rechecked a
 
 ## 11. Extra screen (C10)
 
-From the C10 first version, sections 4 and 7 (11 items, in the project folder, rechecked after its review on 8 Nov; not yet pushed). C10-1 is merged into FR-1, C10-4 into FR-3, C10-5 into FR-67, the "never store frames" part of C10-11 into A9 NFR-2.
+From the C10 first version, sections 4 and 7 (11 items, branch `c10-extra-screen`, read 8 Nov). C10-1 is merged into FR-1, C10-4 into FR-3, C10-5 into FR-67, the "never store frames" part of C10-11 into A9 NFR-2.
 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
@@ -167,7 +167,7 @@ From the C10 first version, sections 4 and 7 (11 items, in the project folder, r
 | # | Point | Who | Status |
 |---|---|---|---|
 | 1 | Points K1 to K5 above | the owners named | messages ready 8 Nov 2026, waiting for answers |
-| 2 | Recheck sections 10 and 11 when C9 final and C10 are pushed (they may change after review) | Ahmed (C9, C10) | drafts read 8 Nov |
+| 2 | Recheck sections 10 and 11 if C9 final or C10 change before they are merged | Ahmed (C9, C10) | read 8 Nov |
 | 3 | C10 open points (Windows driver signing, Linux desktops with `VIRTUAL`) may change FR-72 | Mahmoud, Ali (B6) | not checked |
 | 4 | Confirm the C2 lines, which I worded from C2's text | Mohammed (C2) | [PROPOSAL] |
 | 5 | C1 v2 is a draft not yet reviewed by its owner; its 22 requirements may change | Mahmoud (C1) | not checked |
@@ -179,5 +179,5 @@ From the C10 first version, sections 4 and 7 (11 items, in the project folder, r
 2. Mohammed, `C2-ai-node.md` (third version) and `C3-file-indexing.md` (final) §3, §4, §6, §7 (on main, pull request 41); `C5-unified-search.md` §8 (on main, pull request 44).
 3. Ali, `C4-duplicate-detection.md` §3, §6, §8 (pull request 43); `C7-password-management.md` §9 (pull request 48); `C11-security-privacy.md` §3, §7 (pull request 49); `B6-technology-final.md` choices 3 and 5 (pull request 42).
 4. Samer, `research/C6-file-sharing.md` §8 and §9 (on main).
-5. Ahmed, `C8-clipboard-sync.md` §7 (branch `c8-final`, pull request 39); `C9-screen-sharing-notes.md` §1 to §4 (branch `c9-screen-sharing`, pull request 40); `C9-screen-sharing.md` §6 and `C10-extra-screen.md` §3, §4, §7 (drafts in the project folder, round 3, not pushed).
+5. Ahmed, `C8-clipboard-sync.md` §7 (branch `c8-final`, pull request 39); `C9-screen-sharing-notes.md` §1 to §4 (branch `c9-screen-sharing`, pull request 40); `C9-screen-sharing.md` §6 (branch `c9-final`) and `C10-extra-screen.md` §3, §4, §7 (branch `c10-extra-screen`).
 6. Mahmoud, round-3 task card for Ahmed (PDF, 3 Nov 2026), part B items 1 and 2.
