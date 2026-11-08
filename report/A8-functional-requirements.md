@@ -35,7 +35,7 @@ Collected from the requirement lists of C1, C3, C4, C5, C6, C7, C8, C9, C10 and 
 | FR-13 | refuse every connection from a certificate that is not trusted (except the pairing port during a window), a known id with a different certificate (with a notice), and every removed id | FR-C1-12, -13, -18 |
 | FR-14 | on every connection check the certificate hash and a fresh signed challenge, and refuse TLS below 1.3 or a lower protocol version | FR-C1-14, FR-C1-22 |
 | FR-15 | allow typing an address by hand, and show a clear message when the Wi-Fi blocks devices or the iOS Local Network permission is off | FR-C1-15, FR-C1-20 |
-| FR-16 | pair each new device with every other device, and may offer "Introduce my new device" with a code on every target device | FR-C1-16 |
+| FR-16 | pair each new device with every other device; an optional "Introduce my new device" step, if offered, must show a prompt and a 6-digit code on every target device and store nothing before both users tap Match | FR-C1-16 |
 | FR-17 | let the user remove a lost device from any trusted device, spread the removal to online devices at once and to others at their next contact, say what the removed device keeps, and offer to change the vault key | FR-C1-17, FR-C1-19, SEC-8, SEC-9 |
 | FR-18 | mark a device offline after 3 missed 10-second heartbeats | FR-C1-21 |
 
@@ -124,7 +124,7 @@ C2 has no requirement list; these lines are taken from its answers Q1 to Q3 and 
 
 ## 10. Screen sharing and remote control (C9)
 
-From the C9 final draft, section 6 (17 items, in the project folder, not yet pushed; may change slightly after review). C9-1 is merged into FR-2, C9-2 (trusted) into FR-1, C9-5 into FR-3, C9-14 into A9 NFR-2.
+From the C9 final draft, section 6 (17 items, in the project folder, rechecked after its review on 8 Nov; not yet pushed). C9-1 is merged into FR-2, C9-2 (trusted) into FR-1, C9-5 into FR-3, C9-14 into A9 NFR-2.
 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
@@ -138,7 +138,7 @@ From the C9 final draft, section 6 (17 items, in the project folder, not yet pus
 
 ## 11. Extra screen (C10)
 
-From the C10 first version, section 7 (11 items, in the project folder, not yet pushed). C10-1 is merged into FR-1, C10-4 into FR-3, C10-5 into FR-67, the "never store frames" part of C10-11 into A9 NFR-2.
+From the C10 first version, sections 4 and 7 (11 items, in the project folder, rechecked after its review on 8 Nov; not yet pushed). C10-1 is merged into FR-1, C10-4 into FR-3, C10-5 into FR-67, the "never store frames" part of C10-11 into A9 NFR-2.
 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
@@ -148,7 +148,7 @@ From the C10 first version, section 7 (11 items, in the project folder, not yet 
 | FR-75 | keep the screen device awake while it shows the extra screen, and stop the session when the app leaves the foreground on iPhone/iPad | C10-8 |
 | FR-76 | let the user stop the extra screen from either device at any time | C10-9 |
 | FR-77 | ask for the system permission where the system demands it (Wayland portal, macOS Screen Recording) and use no private API in v1 | C10-10 |
-| FR-78 | ask the user on both devices every time before an extra screen starts *(see conflict K4)* | C10-11, SEC-3 |
+| FR-78 | ask the user on both devices every time before an extra screen starts, in extend and in mirror mode *(see conflict K4)* | C10-11, C10 §3, §4, SEC-3 |
 
 ## 12. Security and privacy rules that are not above (C11)
 
@@ -161,7 +161,7 @@ SEC-5 (encryption of the main database) and SEC-11 (no data outside the local ne
 | K1 | Main database: C11 SEC-5 encrypts it with a random key; B6 final choice 5 and C3 open point 5 (B5) open it without a key | A9 NFR-7 as [PROPOSAL], pending | Ali (B6, C11), Mohammed (B5, C3) |
 | K2 | List passed by a third device: C3 §3 keeps the copy with the higher change number (no signature); C11 SEC-7 accepts it only with the owner's signature | the C11 rule (stricter) | Mohammed (C3), Ali (C11) |
 | K3 | Delete from another device: C4 FR-C4-6 only needs the user's confirmation; C11 SEC-4 and SEC-10 also need the owner's delete permission and a fingerprint/PIN | both, merged in FR-35 and FR-5 | Ali (C4 and C11: align C4's wording) |
-| K4 | Approval for the extra screen: SEC-3 says "on the target device"; C11's table and C10 §3 say "user on both devices" | C10's rule (both devices) | Ali (C11: align SEC-3 wording) |
+| K4 | Approval for the extra screen: SEC-3 says "on the target device"; C11's table and C10 §3 and §4 say "user on both devices, every time", for extend and mirror | C10's rule (both devices, both modes) | Ali (C11: align SEC-3 wording) |
 | K5 | Wrong owner names in C6 open points: point 5 says "Ahmed (C11)" (C11 is Ali's) and point 6 says "Mohammed (C4)" (C4 is Ali's) | no change to the requirements | Samer (C6) |
 
 ## Open points and who settles them
