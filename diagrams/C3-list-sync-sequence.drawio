@@ -1,0 +1,171 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="C3 list sync sequence" id="C3-list-sync-sequenc">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="980" pageHeight="760">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="C3: the phone catches up with the laptop's file list" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="0" width="940" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Phone&lt;br&gt;UI" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="15.0" y="30" width="190" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="88" as="sourcePoint" />
+            <mxPoint x="110" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="Phone app&lt;br&gt;indexing module (C3)&lt;br&gt;+ communication layer" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="245.0" y="30" width="190" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="88" as="sourcePoint" />
+            <mxPoint x="340" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="Laptop app&lt;br&gt;communication layer&lt;br&gt;+ indexing module (C3)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="525.0" y="30" width="190" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="88" as="sourcePoint" />
+            <mxPoint x="620" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Laptop&lt;br&gt;local storage" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="765.0" y="30" width="190" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="88" as="sourcePoint" />
+            <mxPoint x="860" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="120" as="sourcePoint" />
+            <mxPoint x="340" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="1. user opens the app" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="160" y="104" width="130" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="162" as="sourcePoint" />
+            <mxPoint x="620" y="162" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="2. connect and authenticate (C1, section 1.5)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="146" width="279" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="204" as="sourcePoint" />
+            <mxPoint x="340" y="204" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="3. trusted; list sharing is on for this phone" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="340" y="188" width="279" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="246" as="sourcePoint" />
+            <mxPoint x="620" y="246" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="4. send me your changes after number 120" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="356" y="230" width="248" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="288" as="sourcePoint" />
+            <mxPoint x="860" y="288" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="5. read changes 121 to 150" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="659" y="272" width="161" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="330" as="sourcePoint" />
+            <mxPoint x="620" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="6. 30 changes (added, changed, deleted)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="619" y="314" width="242" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="372" as="sourcePoint" />
+            <mxPoint x="340" y="372" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="7. changes 121 to 150, in batches" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="378" y="356" width="205" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="414" as="sourcePoint" />
+            <mxPoint x="344" y="432" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="414" />
+              <mxPoint x="380" y="432" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="8. save in the copy of the laptop list;&lt;br&gt;last number = 150, last update = now" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="386" y="409" width="242" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="466" as="sourcePoint" />
+            <mxPoint x="110" y="466" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="9. &quot;Laptop: online, list up to date&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="113" y="450" width="223" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="While both are online: new changes every few seconds, in small batches" style="html=1;whiteSpace=wrap;fontSize=10;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="502" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="562" as="sourcePoint" />
+            <mxPoint x="340" y="562" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="10. changes 151 to 153" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="412" y="546" width="136" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="The laptop is switched off: 3 missed heartbeats (C1), about 30 to 40 s" style="html=1;whiteSpace=wrap;fontSize=10;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="606" width="460" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="666" as="sourcePoint" />
+            <mxPoint x="344" y="684" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="380" y="666" />
+              <mxPoint x="380" y="684" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="11. mark the laptop offline;&lt;br&gt;keep its list (nothing is deleted)" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="386" y="661" width="211" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="340" y="724" as="sourcePoint" />
+            <mxPoint x="110" y="724" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="12. &quot;Laptop: offline, list from 14:20&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="107" y="708" width="236" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
