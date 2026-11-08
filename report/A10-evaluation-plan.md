@@ -90,6 +90,6 @@ Nobody in the team has a Mac or a Linux machine (B6 §4, B1 decision 15). What t
 ## Sources (all opened 8 Nov 2026)
 
 1. Phase 2 tests and open points in: `C2-ai-node.md`, `C3-file-indexing.md` §7, `C5-unified-search.md` §9 (Mohammed, on main); `C4-duplicate-detection.md` (pull request 43), `C7-password-management.md` (pull request 48), `C11-security-privacy.md` (pull request 49), `B6-technology-final.md` §4 (pull request 42) (Ali); `C1-device-discovery-pairing-trust.md` §6, §9 and `B1-architecture-v2.md` decision 15 (Mahmoud, pull request 38); `research/C6-file-sharing.md` §9 (Samer, on main).
-2. Ahmed: `C8-clipboard-sync.md` (pull request 39); `C9-screen-sharing.md` §6 and open points, `C10-extra-screen.md` §1, §4 and open points (round-3 drafts, not pushed).
+2. Ahmed: `C8-clipboard-sync.md` (pull request 39); `C9-screen-sharing.md` §6 and open points (branch `c9-final`), `C10-extra-screen.md` §1, §4 and open points (branch `c10-extra-screen`).
 3. `A8-functional-requirements.md` and `A9-non-functional-requirements.md` (this round).
 4. Mahmoud, round-3 task card (PDF, 3 Nov 2026), part B item 3.
