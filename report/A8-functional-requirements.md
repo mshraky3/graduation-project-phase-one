@@ -8,8 +8,8 @@ Collected from the requirement lists of C1, C3, C4, C5, C6, C7, C8, C9, C10 and 
 
 - Every "The app must ..." line in the designs was read; lines that say the same thing in two designs were **merged** into one requirement, and the source column lists every origin (for example "C8-7, SEC-1" = C8 requirement 7 and C11 requirement SEC-1).
 - Wording is made uniform: "The app must ..." (the subject is the device app on every device unless another device is named).
-- Measurable qualities (speed, size, privacy, battery, languages) are in **A9**. Each design's test is in **A10**.
-- Where two designs disagree, the stricter rule is written here and the point is listed in section 13 for the owners to settle.
+- Measurable qualities (speed, size, privacy, battery, languages) are in **A9**, including C11 SEC-5 (NFR-7) and SEC-11 (NFR-1); every other C11 SEC line is merged into a row below. Each design's test is in **A10**.
+- Where two designs disagree, the stricter rule is written here and the point is listed in section 12 for the owners to settle.
 
 ## 1. General rules (all features)
 
@@ -45,7 +45,7 @@ C2 has no requirement list; these lines are taken from its answers Q1 to Q3 and 
 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
-| FR-19 | suggest one AI device among the laptops and PCs that meet the minimum hardware, ranked by memory, cores, free disk and how often it is on; let the user confirm or pick another; never a phone or tablet; save the choice on every device | C2 Q1 |
+| FR-19 | suggest one AI device among the laptops and PCs that meet the minimum hardware, ranked by memory, CPU cores, free disk and whether it is usually on and plugged in; let the user confirm or pick another; never a phone or tablet; save the choice on every device | C2 Q1 |
 | FR-20 | when the AI device is off, keep all non-AI features working, show "AI paused: *device* is off" with the last results and their date, and offer (not force) moving the role to another capable online device | C2 Q1, C5-9, B1 rule 4 |
 | FR-21 | when the role moves, rebuild the similarity data on the new device from the lists it holds and delete it on the old one; never copy similarity data | C2 Q1 |
 | FR-22 | ask the owner device for a 224 × 224 preview of a photo (3 frames of a video) only while it is online and only if "Allow the AI device to see photo previews" is on for it; delete each preview after use; say when a device's photos are left out | C2 Q3, C3 §4, FR-C4-4, C5-10, SEC-6 |
@@ -91,7 +91,7 @@ C2 has no requirement list; these lines are taken from its answers Q1 to Q3 and 
 | ID | Requirement: the app must ... | Source |
 |---|---|---|
 | FR-44 | let the user choose one or more files and one paired device | FS-1 |
-| FR-45 | ask the receiving user to accept or decline, unless auto-accept for own devices is on (off by default) | FS-3, SEC-2 |
+| FR-45 | ask the receiving user to accept or decline, unless auto-accept for own devices is on (off by default [PROPOSAL], C6 open point 3) | FS-3, SEC-2 |
 | FR-46 | show progress on both devices and let either user cancel at any time | FS-4 |
 | FR-47 | send in chunks on a separate file connection, keep received chunks when it drops, resume with only the missing chunks, and show "Paused" and then "Failed – tap to retry" | FS-6, FS-7, FS-8, B6 final choice 3 |
 | FR-48 | check the fingerprint of the finished file and not save a file that does not match | FS-9 |
@@ -150,11 +150,7 @@ From the C10 first version, sections 4 and 7 (11 items, in the project folder, r
 | FR-77 | ask for the system permission where the system demands it (Wayland portal, macOS Screen Recording) and use no private API in v1 | C10-10 |
 | FR-78 | ask the user on both devices every time before an extra screen starts, in extend and in mirror mode *(see conflict K4)* | C10-11, C10 §3, §4, SEC-3 |
 
-## 12. Security and privacy rules that are not above (C11)
-
-SEC-5 (encryption of the main database) and SEC-11 (no data outside the local network) are qualities, so they are in A9 (NFR-7, NFR-1). Every other SEC line is merged above: SEC-1 → FR-1, SEC-2 → FR-2, SEC-3 → FR-65 and FR-78, SEC-4 → FR-35, SEC-6 → FR-22 and FR-63, SEC-7 → FR-28, SEC-8 and SEC-9 → FR-17, SEC-10 → FR-5.
-
-## 13. Conflicts between designs, sent to the owners
+## 12. Conflicts between designs, sent to the owners
 
 | # | Conflict | Rule used here | Owners to settle |
 |---|---|---|---|
@@ -168,7 +164,7 @@ SEC-5 (encryption of the main database) and SEC-11 (no data outside the local ne
 
 | # | Point | Who | Status |
 |---|---|---|---|
-| 1 | Conflicts K1 to K5 above | the owners named | sent 8 Nov 2026, waiting |
+| 1 | Conflicts K1 to K5 above | the owners named | messages ready 8 Nov 2026, waiting for answers |
 | 2 | Recheck sections 10 and 11 when C9 final and C10 are pushed (they may change after review) | Ahmed (C9, C10) | drafts read 8 Nov |
 | 3 | C10 open points (Windows driver signing, Linux desktops with `VIRTUAL`) may change FR-72 | Mahmoud, Ali (B6) | not checked |
 | 4 | Confirm the C2 lines, which I worded from C2's text | Mohammed (C2) | [PROPOSAL] |

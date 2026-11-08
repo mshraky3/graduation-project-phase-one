@@ -81,7 +81,6 @@ The qualities the whole app must have, in the eight areas of the task card: priv
 | NFR-36 | The whole interface is in Arabic (right-to-left) and English | Review every screen in both languages | all screens, mirrored layout in Arabic | **no design covers this yet** [PROPOSAL]; for D1 | task card |
 | NFR-37 | Arabic file names are found as in FR-39 (vowel marks, alef, ya, ta marbuta) | Test list of Arabic names and queries | all test pairs found | tested in Python's SQLite 3.42 only | FR-C5-2, C5 §2 |
 | NFR-38 | Search by meaning in Arabic | Text model: published score; photo model: our own Arabic and English query set | text: nDCG@10 71.4 (published, Arabic MIRACL); photos: **no number yet** | text: source; photos: claimed, not measured | B6 final point 5, C5 §3 |
-| NFR-39 | A device label cannot fake its direction or content | Label with control and right-to-left characters | characters stripped | design | FR-C1-11 |
 
 ## Open points and who settles them
 
