@@ -31,7 +31,7 @@ Devices: **W** = Windows PC/laptop, **A** = Android phone, **T** = Android table
 | C2 AI device | Model run on W, preview request from A | W (4 cores, 8 GB) | 100,000 photos (a public photo set: which one and its licence not checked) | First build time measured and compared with the 2 h estimate; memory stays under 8 GB; "AI paused" shown when W is off; role moves to a second W (NFR-11, NFR-22, FR-19 to FR-22) |
 | C5 by meaning | Name vectors on W, then photo search by words | W, A | 50 English and 50 Arabic queries with expected results [PROPOSAL] | Arabic photo search measured against the same English queries (no target yet); query not stored (NFR-3, NFR-38) |
 | C9 Screen sharing | View W→A, then control A→W | W, A, L | Desktop, a video playing, a window run as administrator (cannot be controlled, C9 §1) | Approval every time; Stop ≤ 1 s; picture ≤ 5 s; delay < 200 ms; 1080p at 30 fps; works with no internet; Android control only after the accessibility service (NFR-17, NFR-24, C9 open points) |
-| C10 Extra screen | Mirror W→T first (no driver), then extend with the Windows driver | W, T, L (Wayland) | Desktop use: drag a window, type, play a video | Mirror works everywhere it is promised; extend on W (if the driver can be signed) and Linux Wayland; delay < 100 ms; virtual screen removed at the end (NFR-18, FR-72 to FR-78) |
+| C10 Extra screen | Mirror W→T first (no driver), then extend with the Windows driver | W, T, L (Wayland) | Desktop use: drag a window, type, play a video | Mirror works everywhere it is promised; extend on W (test-signed driver on our test PC) and Linux Wayland GNOME or KDE; delay < 100 ms; virtual screen removed at the end (NFR-18, FR-72 to FR-78) |
 | C7 Vault | Vault on W, then sync to A | W, A | Test logins; a Chrome CSV export | Unlock ≤ about 1 s on the minimum phone; locks after 5 min; both versions kept on conflict; CSV import (NFR-19, FR-52 to FR-57) |
 | C11 Security | Switches and checks (stage 0), database encryption (stage 2) | all | Fresh install; a device with a feature off; traffic capture | Everything off on a fresh install; feature data refused when its switch is off; 0 packets outside the local network; no previews, clipboard items or frames stored; encryption speed cost measured (NFR-1, NFR-2, NFR-7) |
 
@@ -44,8 +44,8 @@ From the "not checked" and "still open" points of all designs.
 | 1 | No Dart package does ECDSA signing on all five systems, or the client-key proof fails | C1 §9, B6 §4 | Native plugin for signing; the in-channel proof stays the design |
 | 2 | mDNS (Bonsoir) fails on a system or the Wi-Fi blocks it | C1 §1.8, B6 §4 | QR with address, typed address (FR-15) |
 | 3 | WebRTC does not work with no internet, or adds too much app size | B6 §4, C9 open point 1 | Own TLS stream with compressed frames (C9 §3), slower |
-| 4 | Windows virtual-screen driver cannot be signed or installed by the team | C10 open points | Windows gets mirror only (C10 §4) |
-| 5 | Linux desktop does not offer the portal `VIRTUAL` source | C10 §1 | Mirror |
+| 4 | Windows virtual-screen driver cannot be signed for users: a public release needs an EV certificate and Microsoft attestation/HLK signing | C10 §1 and open points | Phase 2: a test-signed driver on our own test PC (test-signing mode); otherwise and for other users, Windows gets mirror only (C10 §4) |
+| 5 | Linux desktop does not offer the portal `VIRTUAL` source: in GNOME and KDE portals, not in wlroots (Sway); X11 has no such source | C10 §1, §4 | Mirror on wlroots desktops and X11 |
 | 6 | First AI build much slower than 2 h on ONNX Runtime | C2 still open, B6 point 2 | Run while plugged in and idle, in batches; 16-bit vectors; start with the newest photos |
 | 7 | Arabic photo search is weak | B6 point 5, C5 open point 4 | Say so in the app; Arabic name search (FTS) still works; try another model in Phase 2 |
 | 8 | Thresholds 5 and 0.90 give wrong groups | C4 Phase 2 tests | Tune on our photos; similar groups are only suggestions and every delete needs the user |
@@ -85,7 +85,7 @@ Nobody in the team has a Mac or a Linux machine (B6 §4, B1 decision 15). What t
 | 3 | A Mac for Apple builds; a Linux live USB | Mahmoud, the team | still open |
 | 4 | The photo test set (own photos vs a public set and its licence) and the query set | Mohammed (C2, C4 with Ali) | not chosen |
 | 5 | Targets I suggested (clipboard ≤ 1 s, 4 of 5 volunteers, about 1,000 test photos) | the team | [PROPOSAL] |
-| 6 | Signing a Windows driver for C10 | Mahmoud, Ali (B6) | not checked |
+| 6 | Accept a test-signed driver for the Phase 2 Windows extend test (public signing is out of reach) | Mahmoud, Ali (B6) | C10 [PROPOSAL] |
 
 ## Sources (all opened 8 Nov 2026)
 
