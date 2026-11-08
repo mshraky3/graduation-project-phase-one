@@ -1,0 +1,239 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="B5 data model" id="B5-data-model">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1420" pageHeight="960">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="B5: data model. PK = key, FK = points to another entity, (opt) = filled only when needed" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="20" y="0" width="1380" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="34" width="1000" height="916" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Main database (SQLite), on EVERY device; not encrypted by the app [assumption, C11]" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="20" y="38" width="600" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="34" width="380" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Only on the AI device" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#2d6b2d;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="38" width="360" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="450" width="380" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Vault file (SQLCipher), every device that uses C7" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#8a5a00;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="454" width="360" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1030" y="716" width="380" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="Operating system key store" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#5b3d6b;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="720" width="360" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="Device (registry, C1)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="66" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="PK device id (SHA-256 of certificate)&lt;br&gt;certificate, label, kind&lt;br&gt;paired on, introduced by (FK Device)&lt;br&gt;state: trusted / removed&lt;br&gt;removed on, removed by (FK Device)&lt;br&gt;last known addresses, last seen&lt;br&gt;capabilities, protocol version&lt;br&gt;free bytes, total bytes (C3, C4)&lt;br&gt;scan scope, last scan (C3)&lt;br&gt;last change number received (C3)&lt;br&gt;list updated on (C3)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="90" width="270" height="173" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="File record (C3)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="66" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="PK device id (FK Device) + path&lt;br&gt;name, cleaned name (C5)&lt;br&gt;size, modified date, type&lt;br&gt;perceptual hash (photos)&lt;br&gt;partial hash (opt, C4)&lt;br&gt;full SHA-256 (opt, C4)&lt;br&gt;change number&lt;br&gt;deleted mark, deleted on&lt;br&gt;cloud only (yes / no)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="90" width="280" height="143" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="Search index (C5, FTS5, derived)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="66" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="rowid = file record&lt;br&gt;cleaned name, trigram tokens" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="90" width="290" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="Feature switch" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="330" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="PK device id (FK Device) + feature&lt;br&gt;on / off (default off, B1 rule 6)&lt;br&gt;e.g. list sharing, clipboard send / receive,&lt;br&gt;previews to AI, search by meaning,&lt;br&gt;remote delete, auto-accept files, screen" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="354" width="270" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="Setting (this device)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="478" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="PK key&lt;br&gt;value: AI device id, scan folders,&lt;br&gt;excluded folders, smallest file 64 KB,&lt;br&gt;clipboard pause until" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="502" width="270" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="Transfer (C6)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="600" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="22" value="PK transfer id&lt;br&gt;peer (FK Device), direction&lt;br&gt;file name, size, full SHA-256&lt;br&gt;state: waiting / sending / paused /&lt;br&gt;done / failed / cancelled&lt;br&gt;chunks received, temporary path&lt;br&gt;created, expires (24 h)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="624" width="270" height="113" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="Search history (C5)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="760" width="270" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="last 10 queries, this device only&lt;br&gt;cleared by the user" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="30" y="784" width="270" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="Duplicate group (C4)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="330" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="26" value="PK group id&lt;br&gt;kind: exact / same photo / similar&lt;br&gt;on one device / on several&lt;br&gt;space that can be freed&lt;br&gt;computed on, made by (here / AI device)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="354" width="280" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="Group member (C4)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="330" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="28" value="PK group id (FK) + device id + path&lt;br&gt;FK File record&lt;br&gt;suggested to keep (yes / no)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="354" width="290" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Ignored group (C4, shared)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="470" width="290" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="PK set of member hashes&lt;br&gt;ignored on, by (FK Device)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="690" y="494" width="290" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="Delete request (C4)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="PK request id&lt;br&gt;file to delete (FK File record)&lt;br&gt;expected full SHA-256&lt;br&gt;copy to keep (FK File record)&lt;br&gt;asked by (FK Device), asked on&lt;br&gt;state: waiting / done / refused" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="524" width="280" height="98" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="Deletion log (C4, 30 days)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="686" width="280" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="what, when, asked by which device&lt;br&gt;which copy was kept" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="350" y="710" width="280" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="Vector (C2, C4, C5)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="66" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="36" value="PK device id + path + kind&lt;br&gt;kind: photo / video frame 1-3 / name&lt;br&gt;full or partial hash when made&lt;br&gt;512 numbers (CLIP) or 384 (e5)&lt;br&gt;model version, made on" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="90" width="340" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="Preview queue (C2)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="230" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="38" value="device id (FK Device) + path&lt;br&gt;waiting because the device is off&lt;br&gt;made on" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="254" width="340" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="Not stored anywhere" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="330" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="40" value="previews (deleted after use), query text (C5),&lt;br&gt;clipboard items (C8), screen frames (C9)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="354" width="340" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="Vault entry (C7) [assumed, C7 not written]" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#ffe6cc;strokeColor=#d79b00;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="484" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="42" value="PK entry id&lt;br&gt;site or app, user name, password&lt;br&gt;notes, created, modified&lt;br&gt;change number (if the vault syncs, C11)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="508" width="340" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Whole file encrypted; key from the master&lt;br&gt;password, never stored (B6 final, choice 5)" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="610" width="340" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="Device private key (C1)" style="html=1;whiteSpace=wrap;fontSize=11;fontStyle=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="750" width="340" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="made at first start, never leaves the device&lt;br&gt;Keychain, Android Keystore, libsecret,&lt;br&gt;Windows DPAPI file (B6 final, point 6)" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#ffffff;strokeColor=#000000;align=left;verticalAlign=top;spacingLeft=6;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="774" width="340" height="53" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="110" as="sourcePoint" />
+            <mxPoint x="350" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="47" value="1 .. *" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="295" y="93" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="110" as="sourcePoint" />
+            <mxPoint x="690" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="1 .. 1" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="630" y="93" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="165" y="263" as="sourcePoint" />
+            <mxPoint x="165" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" value="1 .. *" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="165" y="290" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="30" y="240" as="sourcePoint" />
+            <mxPoint x="30" y="660" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="18" y="240" />
+              <mxPoint x="18" y="660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" value="1 .. *" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="-12" y="623" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="380" as="sourcePoint" />
+            <mxPoint x="690" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" value="1 .. *" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="630" y="363" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="570" y="233" as="sourcePoint" />
+            <mxPoint x="835" y="330" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="570" y="300" />
+              <mxPoint x="835" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" value="1 .. *" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="690" y="283" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="58" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="560" as="sourcePoint" />
+            <mxPoint x="630" y="210" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="650" y="560" />
+              <mxPoint x="650" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59" value="* .. 1" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="621" y="463" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="60" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="490" y="622" as="sourcePoint" />
+            <mxPoint x="490" y="686" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="61" value="1 .. 1" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="495" y="647" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="62" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1050" y="120" as="sourcePoint" />
+            <mxPoint x="630" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1010" y="120" />
+              <mxPoint x="1010" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="63" value="* .. 1 (by device id + path)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="733" y="163" width="174" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
