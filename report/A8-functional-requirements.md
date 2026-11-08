@@ -9,7 +9,7 @@ Collected from the requirement lists of C1, C3, C4, C5, C6, C7, C8, C9, C10 and 
 - Every "The app must ..." line in the designs was read; lines that say the same thing in two designs were **merged** into one requirement, and the source column lists every origin (for example "C8-7, SEC-1" = C8 requirement 7 and C11 requirement SEC-1).
 - Wording is made uniform: "The app must ..." (the subject is the device app on every device unless another device is named).
 - Measurable qualities (speed, size, privacy, battery, languages) are in **A9**, including C11 SEC-5 (NFR-7) and SEC-11 (NFR-1); every other C11 SEC line is merged into a row below. Each design's test is in **A10**.
-- Where two designs disagree, the stricter rule is written here and the point is listed in section 12 for the owners to settle.
+- Where two designs disagree or one leaves a rule out, the stricter rule is written here until the owners answer, and the point is listed in section 12 as a conflict, gap or unclear point.
 
 ## 1. General rules (all features)
 
@@ -150,21 +150,23 @@ From the C10 first version, sections 4 and 7 (11 items, in the project folder, r
 | FR-77 | ask for the system permission where the system demands it (Wayland portal, macOS Screen Recording) and use no private API in v1 | C10-10 |
 | FR-78 | ask the user on both devices every time before an extra screen starts, in extend and in mirror mode *(see conflict K4)* | C10-11, C10 §3, §4, SEC-3 |
 
-## 12. Conflicts between designs, sent to the owners
+## 12. Conflicts, gaps and unclear points, sent to the owners
 
-| # | Conflict | Rule used here | Owners to settle |
-|---|---|---|---|
-| K1 | Main database: C11 SEC-5 encrypts it with a random key; B6 final choice 5 and C3 open point 5 (B5) open it without a key | A9 NFR-7 as [PROPOSAL], pending | Ali (B6, C11), Mohammed (B5, C3) |
-| K2 | List passed by a third device: C3 §3 keeps the copy with the higher change number (no signature); C11 SEC-7 accepts it only with the owner's signature | the C11 rule (stricter) | Mohammed (C3), Ali (C11) |
-| K3 | Delete from another device: C4 FR-C4-6 only needs the user's confirmation; C11 SEC-4 and SEC-10 also need the owner's delete permission and a fingerprint/PIN | both, merged in FR-35 and FR-5 | Ali (C4 and C11: align C4's wording) |
-| K4 | Approval for the extra screen: SEC-3 says "on the target device"; C11's table and C10 §3 and §4 say "user on both devices, every time", for extend and mirror | C10's rule (both devices, both modes) | Ali (C11: align SEC-3 wording) |
-| K5 | Wrong owner names in C6 open points: point 5 says "Ahmed (C11)" (C11 is Ali's) and point 6 says "Mohammed (C4)" (C4 is Ali's) | no change to the requirements | Samer (C6) |
+**Type:** *conflict* = two files give different rules; *gap* = one file leaves out a rule another file adds; *unclear* = wording that may only be out of date. Line numbers are in the file as it is on the named branch or pull request (8 Nov 2026).
+
+| # | Type | What the files say | Rule used here | Question to |
+|---|---|---|---|---|
+| K1 | conflict | C11 line 68 (PR 49): "SEC-5 The app must encrypt the main database with a random key kept in the system key store". B6 final line 28 (PR 42), choice 5: "the main database is opened without a key". C3 line 102 (main), open point 5: "B5 assumes not, only the vault" | none yet: A9 NFR-7 marked [PROPOSAL], pending | Ali (C11, B6), Mohammed (B5, C3): which rule do you adopt? |
+| K2 | conflict | C3 line 50 (main): "the receiver keeps whichever copy has the higher number". C11 line 70 (PR 49): "SEC-7 … only if the owner device's signature is valid" | C11's rule in FR-28, until answered | Mohammed (C3), Ali (C11): which rule do you adopt? |
+| K3 | gap | C4 line 73 (PR 43): "FR-C4-6 A file is deleted only by its owning device, after user confirmation, after re-hashing it …" (no delete permission, no log). C11 line 67 (PR 49): "SEC-4 … only if the owner turned on the delete permission … and must log every delete for 30 days" | both, merged in FR-35 and FR-5 | Ali (C4, C11): should C4 add the permission and the log? |
+| K4 | unclear (inside C11) | C11 line 66 (PR 49): "SEC-3 The app must ask the user on the target device every time …". C11 line 37, table: extra screen "User on both devices [PROPOSAL …]". C10 §3 and §4 (round-3 draft): both devices, every time, for extend and mirror | C10's rule (both devices) in FR-78 | Ali (C11): does SEC-3 mean both devices for the extra screen? |
+| K5 | unclear (owner names) | C6 line 100 (main): "Mahmoud (C1) and Ahmed (C11)"; line 101: "Mohammed (C4)". Today C11 and C4 are Ali's | no change to the requirements | Samer (C6): please confirm the owner names |
 
 ## Open points and who settles them
 
 | # | Point | Who | Status |
 |---|---|---|---|
-| 1 | Conflicts K1 to K5 above | the owners named | messages ready 8 Nov 2026, waiting for answers |
+| 1 | Points K1 to K5 above | the owners named | messages ready 8 Nov 2026, waiting for answers |
 | 2 | Recheck sections 10 and 11 when C9 final and C10 are pushed (they may change after review) | Ahmed (C9, C10) | drafts read 8 Nov |
 | 3 | C10 open points (Windows driver signing, Linux desktops with `VIRTUAL`) may change FR-72 | Mahmoud, Ali (B6) | not checked |
 | 4 | Confirm the C2 lines, which I worded from C2's text | Mohammed (C2) | [PROPOSAL] |
