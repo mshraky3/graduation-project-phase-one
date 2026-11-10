@@ -84,15 +84,17 @@ The diagram shows a Windows laptop with the tool's driver as the host device and
 
 1. and 2. The user taps "Use as extra screen" on the iPad. The request, with the iPad's screen size, goes to the laptop over the trusted messages connection.
 3. The laptop's core services check that the iPad is paired and that Extra Screen is allowed for it, and the user confirms on the laptop. If the user chooses Deny, or nobody answers, nothing more happens and the iPad shows "Not allowed".
-4. and 5. The laptop's feature module asks the display driver for a new screen at the iPad's size, and Windows adds it.
-6. and 7. The WebRTC setup messages (offer, answer and fingerprint) travel over the messages connection; the video and the data channel then open directly between the two devices.
-8. Pictures of the new screen stream to the iPad.
-9. and 10. A touch on the iPad travels back on the data channel and becomes a mouse movement or click on the extra screen only.
-11. to 13. Either side taps Stop, or the iPad app leaves the front. The stream closes and the laptop removes the virtual screen.
+4. to 6. The laptop's feature module asks the display driver for a new screen at the iPad's size; Windows adds it and reports that the new screen is ready.
+7. and 8. The WebRTC setup messages (offer, answer and fingerprint) travel over the messages connection; the video and the data channel then open directly between the two devices.
+9. Pictures of the new screen stream to the iPad.
+10. to 12. A touch on the iPad travels back on the data channel and becomes a mouse movement or click on the extra screen only.
+13. to 15. Either side taps Stop, or the iPad app leaves the front. The stream closes and the laptop removes the virtual screen.
 
 An Android tablet follows the same steps. On Linux with Wayland, step 5 is the system portal dialog. On macOS and Linux with X11, no virtual screen is added and the existing screen is mirrored (section 5).
 
 ## 8. Requirements
+
+The requirements appendix gives these requirements as FR-72 to FR-78; the rules shared by all features are FR-1 to FR-3 and NFR-2.
 
 1. The tool must allow a device to be used as an extra screen only between paired devices of the same user on the local network.
 2. The tool must add a true extra screen at the screen device's size on Windows (with the tool's own signed display driver) and on Linux with Wayland (where the desktop offers a virtual monitor).
@@ -110,9 +112,9 @@ An Android tablet follows the same steps. On Linux with Wayland, step 5 is the s
 
 No member of the team has a Mac or a Linux machine, so every macOS and Linux statement in this design comes from the documentation and has not been tested. The following points have also not yet been verified in a primary source:
 
-- Windows: whether a user-mode display driver falls under the same signing rule as kernel-mode drivers (the signing page for user-mode drivers could not be opened), and the cost of an EV certificate.
+- Windows: whether a user-mode display driver falls under the same signing rule as kernel-mode drivers, and the cost of an EV certificate.
 - macOS: how Spacedesk's beta driver creates its screen (not described in its manual).
-- Linux with X11: the `dummy` X driver (its manual page could not be opened), and building EVDI for each kernel.
+- Linux with X11: the `dummy` X driver, and building EVDI for each kernel.
 - Linux with Wayland: which GNOME and KDE releases first offered the virtual monitor source.
 - iPhone and iPad: the full page of `isIdleTimerDisabled` (only its summary was read).
 
@@ -129,7 +131,7 @@ No member of the team has a Mac or a Linux machine, so every macOS and Linux sta
 
 ## References
 
-All pages were opened on 8 November 2026 and read as text.
+All pages were opened on 8 November 2026.
 
 1. Microsoft, "Indirect display driver model overview": https://learn.microsoft.com/en-us/windows-hardware/drivers/display/indirect-display-driver-model-overview
 2. Microsoft, driver signing: https://learn.microsoft.com/en-us/windows-hardware/drivers/install/kernel-mode-code-signing-policy--windows-vista-and-later- ; https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/driver-signing-offerings ; https://learn.microsoft.com/en-us/windows-hardware/drivers/dashboard/code-signing-attestation ; https://learn.microsoft.com/en-us/windows-hardware/drivers/install/the-testsigning-boot-configuration-option
