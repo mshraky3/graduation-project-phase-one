@@ -58,7 +58,7 @@ In this section, a *paired device* is a device that the user has joined to the t
 
 ### Extra Screen [Scope pending]
 
-**F15. [Scope pending]** The tool must let the user use a paired tablet or phone as an extra screen for a computer. It must add a true extra screen on Windows (with the tool's own signed display driver) and on Linux with Wayland (where the desktop offers a virtual monitor), and must mirror the existing screen on macOS and wherever an extra screen cannot be added, telling the user so. The user must approve on both devices every time a session starts.
+**F15. [Scope pending]** The tool must let the user use a paired tablet or phone as an extra screen for a computer, adding a true extra screen on Windows (with the tool's own signed display driver) and on Linux with Wayland (where the desktop offers a virtual monitor), mirroring the existing screen on macOS and wherever an extra screen cannot be added while telling the user so, and asking the user on both devices every time a session starts.
 
 ## 3.x.2 Non-functional requirements
 

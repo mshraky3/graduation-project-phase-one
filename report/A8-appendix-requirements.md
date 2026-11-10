@@ -124,7 +124,7 @@ Numbers such as time limits, sizes and similarity thresholds are design targets.
 | No. | The tool must ... | Source feature |
 |---|---|---|
 | FR-65 | start a session only after the user of the shared device accepts that request, ask for viewing and for control separately ("Allow view", "Allow view and control", "Deny"), and not offer control of a device that cannot be controlled (iPhone and iPad; Android without the accessibility service); unattended access is not allowed | Screen Sharing and Remote Control [Scope pending] |
-| FR-66 | let the user of the shared device choose the whole screen or one window through the system's own picker where there is one (Windows, macOS 14 and later, Android 14 and later, Linux on Wayland, iOS 27 and later), and share only the picture, never the sound, in the first release | Screen Sharing and Remote Control [Scope pending] |
+| FR-66 | let the user of the shared device choose the whole screen or one window or app through the system's own picker where there is one (Windows, macOS 14 and later, Android 14 and later, Linux on Wayland, iOS 27 and later), and share only the picture, never the sound, in the first release | Screen Sharing and Remote Control [Scope pending] |
 | FR-67 | send the picture with WebRTC set up only over the encrypted message connection between the paired devices (local network only, with no outside STUN or TURN server), end the session if the DTLS fingerprint differs from the one received over that connection, and keep the request, the answer, "Stop" and the set-up messages on the message connection, with the picture on its own connection | Screen Sharing and Remote Control [Scope pending] |
 | FR-68 | accept mouse and keyboard events only from the viewing device of the current session, and only if control was allowed for that session | Screen Sharing and Remote Control [Scope pending] |
 | FR-69 | show on the shared device a bar that stays on top, reading "Being viewed by …" or "Controlled by …", with a Stop button; end screen capture within 1 second of Stop on either device; and keep the local mouse and keyboard working | Screen Sharing and Remote Control [Scope pending] |
@@ -140,7 +140,7 @@ Numbers such as time limits, sizes and similarity thresholds are design targets.
 | FR-74 | remove the extra screen when the session ends for any reason | Extra Screen [Scope pending] |
 | FR-75 | keep the screen device awake while it shows the extra screen, and stop the session when the tool leaves the foreground on an iPhone or iPad | Extra Screen [Scope pending] |
 | FR-76 | let the user stop the extra screen from either device at any time | Extra Screen [Scope pending] |
-| FR-77 | ask for the system's permission where the system requires it (the Wayland screen portal, macOS Screen Recording), and use no private system interface in the first release | Extra Screen [Scope pending] |
+| FR-77 | ask for the system's permission where the system requires it (the Wayland screen portal, Screen & System Audio Recording on macOS), and use no private system interface in the first release | Extra Screen [Scope pending] |
 | FR-78 | ask the user on both devices, every time, before an extra screen session starts, both for an extra screen and for a mirrored screen | Extra Screen [Scope pending] |
 
 ## A.2 Non-functional requirements
@@ -205,8 +205,8 @@ Each row gives what is measured and the target. The column "Basis" says where th
 
 | No. | Requirement | How it is measured | Target | Basis | Source feature |
 |---|---|---|---|---|---|
-| NFR-30 | One Flutter application runs on Windows 10 and later, macOS 12 and later, Ubuntu 20.04 or Debian 10 and later, Android 7.0 and later, and iOS or iPadOS 15 and later | Install and run on each system | Runs on all five; the macOS, iPhone and iPad versions can be built only on a Mac with Xcode | Design | All features |
-| NFR-31 | Pairing works across systems | Test matrix | At least iPhone with Windows, Android with macOS, iPad with Linux, and a laptop without a camera with a desktop computer | Design target | Device Discovery, Pairing and Trust |
+| NFR-30 | One Flutter application runs on Windows 10 and later, macOS 12 and later, Ubuntu 20.04 or Debian 10 and later, Android 7.0 and later, and iOS or iPadOS 15 and later | Install and run on Windows, Android and Ubuntu 24.04 (from a USB stick or a second partition); macOS, iPhone and iPad are checked by review of the documentation and the design, because they can be built and tested only on a Mac with Xcode | Runs on the systems that can be tested; the others are confirmed by review | Design | All features |
+| NFR-31 | Pairing works across systems | Test matrix of the pairs that can be tested; pairs that involve Apple devices are checked by review of the documentation and the design | Android with Windows, Android with Ubuntu 24.04, and two Windows computers, one of them without a camera | Design target | Device Discovery, Pairing and Trust |
 | NFR-32 | The limits of each system are shown to the user, not hidden: each device offers only what it can do | Check each device (for example, an iPhone offers no control and no AI role; macOS offers the extra screen as a mirrored screen) | No action is offered that would fail | Design | All features |
 
 ### Ease of use
