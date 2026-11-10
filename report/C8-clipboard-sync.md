@@ -78,6 +78,8 @@ Images, and items from phones and tablets, follow the same steps, except that st
 
 ## 8. Requirements
 
+The requirements appendix gives these requirements as FR-58 to FR-64; the rules shared by all features are FR-1 to FR-3 and NFR-2.
+
 1. The tool must keep Clipboard Synchronisation off until the user turns it on, on each device.
 2. The tool must send copied text of up to 1 MB to every paired, online device that has clipboard receiving on, without any further action by the user, where the operating system allows it (section 6).
 3. The tool must send an image (PNG or JPEG, up to 10 MB) only when the user taps "Send to other devices".
@@ -99,10 +101,10 @@ The following points come from the documentation alone and have not yet been ver
 
 - macOS: in which release the clipboard alert is turned on for every user.
 - macOS: whether there is any way to keep a received item out of Universal Clipboard; Apple's `NSPasteboard` documentation lists none.
-- iPhone and iPad: whether `UIPasteboard.changedNotification` reaches a suspended app; the per-app Ask, Allow and Deny setting of iOS 16.1 (described only in articles); which value of the `localOnly` option keeps an item out of Universal Clipboard, since Apple's wording is unclear.
+- iPhone and iPad: whether `UIPasteboard.changedNotification` reaches a suspended app; the per-app Ask, Allow and Deny setting of iOS 16.1; which value of the `localOnly` option keeps an item out of Universal Clipboard, since Apple's wording is unclear.
 - Writing a received item while the app is in the background, on every system.
 - Linux with X11: that the tool must keep running to serve a paste.
-- Linux with Wayland: the core protocol rule, read through a summary of the protocol page; writing in the background through `ext-data-control-v1`; tap-to-send on Ubuntu 24.04 with GNOME.
+- Linux with Wayland: the core protocol rule; writing in the background through `ext-data-control-v1`; tap-to-send on Ubuntu 24.04 with GNOME.
 - That every password manager uses the secret clipboard formats listed in section 5.
 
 ## 10. Open points
@@ -115,7 +117,7 @@ The following points come from the documentation alone and have not yet been ver
 
 ## References
 
-Pages were read on 17 and 29 October 2026. Apple and Android pages were read from the official documentation; the wayland.app page was read through a summary.
+Pages were read on 17 and 29 October 2026. Apple and Android pages were read from the official documentation.
 
 1. Android Developers, "Secure clipboard handling": https://developer.android.com/privacy-and-security/risks/secure-clipboard-handling
 2. Microsoft, "Using the Clipboard": https://learn.microsoft.com/en-us/windows/win32/dataxchg/using-the-clipboard
