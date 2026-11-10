@@ -1,0 +1,317 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Overall: pairing a new device and its first scan (on the laptop)" id="Overall:-pairing-a-n">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1665" pageHeight="1018">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="90" as="sourcePoint" />
+            <mxPoint x="100.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="User" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="90" as="sourcePoint" />
+            <mxPoint x="285.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="User interface" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="205.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="90" as="sourcePoint" />
+            <mxPoint x="470.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="Feature module" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="90" as="sourcePoint" />
+            <mxPoint x="655.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Core services" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="90" as="sourcePoint" />
+            <mxPoint x="840.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Communication layer" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="90" as="sourcePoint" />
+            <mxPoint x="1025.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="Local storage" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="945.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210.0" y="90" as="sourcePoint" />
+            <mxPoint x="1210.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="Operating system" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="90" as="sourcePoint" />
+            <mxPoint x="1395.0" y="998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="New device&lt;br&gt;(phone)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1315.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=none;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="494" width="1475.0" height="476" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="alt" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="494" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="[&quot;Doesn't match&quot;]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="494" width="1415.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#888888;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10.0" y="554" as="sourcePoint" />
+            <mxPoint x="1485.0" y="554" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="else" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="554" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="[&quot;Match&quot; on both]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="554" width="1415.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Overall: pairing a new device and its first scan (on the laptop)" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2" width="1645" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="124" as="sourcePoint" />
+            <mxPoint x="285.0" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="1. taps &quot;Add a device&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="124" y="108" width="136" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="158" as="sourcePoint" />
+            <mxPoint x="470.0" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="2. start pairing" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="328" y="142" width="99" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="192" as="sourcePoint" />
+            <mxPoint x="655.0" y="192" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="3. open a 2-minute pairing window" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="460" y="176" width="205" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="226" as="sourcePoint" />
+            <mxPoint x="840.0" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="4. announce the pairing service" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="651" y="210" width="192" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="260" as="sourcePoint" />
+            <mxPoint x="100.0" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="5. shows the QR code" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="130" y="244" width="124" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="294" as="sourcePoint" />
+            <mxPoint x="1395.0" y="294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="6. scans the QR code with the phone" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="639" y="278" width="217" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="328" as="sourcePoint" />
+            <mxPoint x="840.0" y="328" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="7. connects and proves its key" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1024" y="312" width="186" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="362" as="sourcePoint" />
+            <mxPoint x="655.0" y="362" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="8. check the key; not removed?" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="654" y="346" width="186" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="396" as="sourcePoint" />
+            <mxPoint x="285.0" y="396" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="9. 6-digit number" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="417" y="380" width="105" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="430" as="sourcePoint" />
+            <mxPoint x="100.0" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="10. shows the number (the phone shows it too)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="53" y="414" width="279" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="464" as="sourcePoint" />
+            <mxPoint x="285.0" y="464" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="11. &quot;Match&quot; (on both devices)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="103" y="448" width="180" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="524" as="sourcePoint" />
+            <mxPoint x="100.0" y="524" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="48" value="12. nothing stored, try 1 of 3" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="508" width="186" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="584" as="sourcePoint" />
+            <mxPoint x="1025.0" y="584" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="13. store the phone as a paired device" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="722" y="568" width="236" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="618" as="sourcePoint" />
+            <mxPoint x="100.0" y="618" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="52" value="14. &quot;Paired. Choose what to turn on&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="81" y="602" width="223" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="652" as="sourcePoint" />
+            <mxPoint x="285.0" y="652" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" value="15. turns on &quot;Share my file list&quot; for the phone" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="47" y="636" width="291" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="686" as="sourcePoint" />
+            <mxPoint x="655.0" y="686" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="56" value="16. feature switch on" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="405" y="670" width="130" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="57" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="720" as="sourcePoint" />
+            <mxPoint x="1210.0" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" value="17. list the files in the chosen folders" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="716" y="704" width="248" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="59" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210.0" y="754" as="sourcePoint" />
+            <mxPoint x="470.0" y="754" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="60" value="18. names, sizes, dates" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="769" y="738" width="143" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="61" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="788" as="sourcePoint" />
+            <mxPoint x="1025.0" y="788" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="62" value="19. save file records (encrypted database)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="617" y="772" width="260" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="63" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="822" as="sourcePoint" />
+            <mxPoint x="285.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="64" value="20. &quot;Scanning: 40,000 files so far&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="269" y="806" width="217" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="65" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="856" as="sourcePoint" />
+            <mxPoint x="840.0" y="856" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="66" value="21. list changes, signed by the laptop" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="537" y="840" width="236" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="67" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="890" as="sourcePoint" />
+            <mxPoint x="1395.0" y="890" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="68" value="22. send to the phone" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1052" y="874" width="130" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="69" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="924" as="sourcePoint" />
+            <mxPoint x="1399.0" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1431.0" y="924" />
+              <mxPoint x="1431.0" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="70" value="23. signature valid and change&lt;br&gt;number higher? save the copy" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1437" y="918" width="186" height="28" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

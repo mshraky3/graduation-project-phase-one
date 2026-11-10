@@ -1,0 +1,280 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Device Discovery, Pairing and Trust: pairing by number comparison" id="Device-Discovery,-Pa">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="955" pageHeight="1102">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="90" as="sourcePoint" />
+            <mxPoint x="105.0" y="1082" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="User" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="90" as="sourcePoint" />
+            <mxPoint x="395.0" y="1082" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="This device&lt;br&gt;(opens the window)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="90" as="sourcePoint" />
+            <mxPoint x="685.0" y="1082" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="New device&lt;br&gt;(joins)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=none;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="16.0" y="834" width="758.0" height="212" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="alt" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="16.0" y="834" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="[&quot;Doesn't match&quot; on either device]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="68.0" y="834" width="698.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="11" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#888888;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="16.0" y="894" as="sourcePoint" />
+            <mxPoint x="774.0" y="894" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="else" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="16.0" y="894" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="[&quot;Match&quot; on both]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="68.0" y="894" width="698.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=none;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="548" width="770.0" height="506" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="alt" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="548" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="[a check fails]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="548" width="710.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#888888;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10.0" y="608" as="sourcePoint" />
+            <mxPoint x="780.0" y="608" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="18" value="else" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="608" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="[checks pass]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="608" width="710.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="Device Discovery, Pairing and Trust: pairing by number comparison" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2" width="935" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="124" as="sourcePoint" />
+            <mxPoint x="395.0" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="1. taps &quot;Add a device&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="182" y="108" width="136" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="158" as="sourcePoint" />
+            <mxPoint x="399.0" y="174" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="431.0" y="158" />
+              <mxPoint x="431.0" y="174" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="2. opens the window for 120 s,&lt;br&gt;announces pairing, shows its address" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="437" y="152" width="223" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="228" as="sourcePoint" />
+            <mxPoint x="685.0" y="228" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="3. taps &quot;Join a device&quot;, picks this device&lt;br&gt;(or types its address)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="265" y="198" width="260" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="262" as="sourcePoint" />
+            <mxPoint x="395.0" y="262" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="4. connects (TLS 1.3); certificate not yet verified" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="382" y="246" width="316" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="296" as="sourcePoint" />
+            <mxPoint x="689.0" y="312" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="721.0" y="296" />
+              <mxPoint x="721.0" y="312" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="5. makes a random value and a commitment&lt;br&gt;(hash of its certificate and the value)" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="727" y="290" width="248" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="352" as="sourcePoint" />
+            <mxPoint x="395.0" y="352" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="6. commitment (certificate and value still secret)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="385" y="336" width="310" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="386" as="sourcePoint" />
+            <mxPoint x="399.0" y="402" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="431.0" y="386" />
+              <mxPoint x="431.0" y="402" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="7. makes its own random value" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="437" y="387" width="180" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="428" as="sourcePoint" />
+            <mxPoint x="685.0" y="428" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="8. its random value, label of this device" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="413" y="412" width="254" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="462" as="sourcePoint" />
+            <mxPoint x="395.0" y="462" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="9. reveals certificate, random value, label, signature" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="373" y="446" width="335" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="496" as="sourcePoint" />
+            <mxPoint x="399.0" y="512" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="431.0" y="496" />
+              <mxPoint x="431.0" y="512" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="10. commitment matches? signature valid?&lt;br&gt;not in the removed list?" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="437" y="490" width="248" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="578" as="sourcePoint" />
+            <mxPoint x="685.0" y="578" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="11. stop, nothing stored" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="466" y="562" width="149" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="Each device computes a 6-digit number from both certificates&lt;br&gt;and both random values, as seen on its own connection" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="335.0" y="630" width="410.0" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="44" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="702" as="sourcePoint" />
+            <mxPoint x="105.0" y="702" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="45" value="12. shows the 6-digit number" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="163" y="686" width="174" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="46" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="736" as="sourcePoint" />
+            <mxPoint x="105.0" y="736" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="47" value="13. shows the 6-digit number" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="308" y="720" width="174" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="48" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="770" as="sourcePoint" />
+            <mxPoint x="395.0" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="49" value="14. &quot;Match&quot; or &quot;Doesn't match&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="157" y="754" width="186" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="50" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="804" as="sourcePoint" />
+            <mxPoint x="685.0" y="804" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="51" value="15. &quot;Match&quot; or &quot;Doesn't match&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="302" y="788" width="186" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="52" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="864" as="sourcePoint" />
+            <mxPoint x="685.0" y="864" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="53" value="16. stop, nothing stored, try 1 of 3, warning shown" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="382" y="848" width="316" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="54" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395.0" y="924" as="sourcePoint" />
+            <mxPoint x="399.0" y="940" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="431.0" y="924" />
+              <mxPoint x="431.0" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="55" value="17. store the new device as paired,&lt;br&gt;close the window" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="437" y="918" width="217" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="56" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="980" as="sourcePoint" />
+            <mxPoint x="689.0" y="996" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="721.0" y="980" />
+              <mxPoint x="721.0" y="996" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="57" value="18. store this device as paired" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="727" y="981" width="192" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="58" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="685.0" y="1022" as="sourcePoint" />
+            <mxPoint x="395.0" y="1022" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="59" value="19. connect again on the normal port (reconnection)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="382" y="1006" width="316" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
