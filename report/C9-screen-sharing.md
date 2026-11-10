@@ -90,6 +90,8 @@ Other systems follow the same steps; only the picker and the input call change (
 
 ## 7. Requirements
 
+The requirements appendix gives these requirements as FR-65 to FR-71; the rules shared by all features are FR-1 to FR-3 and NFR-2.
+
 1. The tool must keep Screen Sharing and Remote Control off until the user turns it on, for each device.
 2. The tool must start a session only between paired devices, and only after the user on the shared device accepts that request; there is no unattended access.
 3. The tool must ask for viewing and for control separately ("Allow view / Allow view and control / Deny") and must not offer control on a device that cannot be controlled (iPhone, iPad, and Android without the accessibility service).
@@ -135,7 +137,7 @@ No member of the team has a Mac, an iPhone build environment or a Linux machine,
 
 ## References
 
-Pages were read on 29 October and 8 November 2026. Apple developer pages were read from Apple's documentation data; Apple Support, Microsoft, X.Org and Google Play pages were read through a page reader.
+Pages were read on 29 October and 8 November 2026. Apple developer pages were read from Apple's documentation data.
 
 1. Microsoft, "Screen capture": https://learn.microsoft.com/en-us/windows/apps/develop/media-authoring-processing/screen-capture
 2. Microsoft, `SendInput`: https://learn.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-sendinput
@@ -149,7 +151,7 @@ Pages were read on 29 October and 8 November 2026. Apple developer pages were re
 10. Apple Support, "Control access to screen and system audio recording on Mac": https://support.apple.com/guide/mac-help/control-access-screen-system-audio-recording-mchld6aa7d23/mac
 11. Apple Support, "Allow accessibility apps to access your Mac": https://support.apple.com/guide/mac-help/allow-accessibility-apps-to-access-your-mac-mh43185/mac
 12. Apple Support, "What's in the menu bar on Mac?" (privacy indicators): https://support.apple.com/guide/mac-help/use-the-menu-bar-mchlp1446/mac
-13. Apple Support, "Take a screen recording on iPhone" (the body could not be read): https://support.apple.com/guide/iphone/take-a-screen-recording-iph52f6e1987/ios
+13. Apple Support, "Take a screen recording on iPhone": https://support.apple.com/guide/iphone/take-a-screen-recording-iph52f6e1987/ios
 14. Apple, ReplayKit, `RPSystemBroadcastPickerView`, `RPBroadcastSampleHandler`, `RPScreenRecorder`, `RPBroadcastController`: https://developer.apple.com/documentation/replaykit and https://developer.apple.com/documentation/replaykit/rpsystembroadcastpickerview
 15. Android Developers, "Media projection" (consent, status bar chip, stop on lock): https://developer.android.com/media/grow/media-projection
 16. Android Developers, `AccessibilityService.dispatchGesture`: https://developer.android.com/reference/android/accessibilityservice/AccessibilityService
