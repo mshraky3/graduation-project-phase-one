@@ -1,95 +1,104 @@
-# A10: Implementation and evaluation plan (first version)
+# Implementation and Evaluation Plan
 
-Owner: Ahmed. Status: first version, 8 Nov 2026. Chapter 3 of the report. Phase 1 is design only: no code; this file plans Phase 2.
-How each part would be built and tested in Phase 2, and what counts as success. The success criteria are the numbers and "Phase 2 tests" already named in the designs; the requirement numbers (FR-n, NFR-n) are from `A8-functional-requirements.md` and `A9-non-functional-requirements.md`.
-**[PROPOSAL]** = my plan or number, to agree with the team. **not checked** = not confirmed in a source or a test.
+## 1. Introduction
 
-## 1. Build order [PROPOSAL]
+This chapter explains how the tool will be built and tested in Phase 2, and what will count as success. It sets out the order in which the features are built, how each feature is tested and on which devices, which risks could stop a feature and what is done instead, and, honestly, which operating systems the team can and cannot test.
 
-Each stage ends with something that can be shown, so if time runs out the earlier stages still make a demo.
+The success criteria are the numbers and tests already named in the feature designs. Requirement numbers (FR-n for functional, NFR-n for non-functional) refer to the requirements appendix.
 
-| Stage | What is built | Why first |
+## 2. Build order
+
+The tool is built in stages. Each stage ends with something that can be shown, so that if time runs short the earlier stages still form a working demonstration.
+
+| Stage | What is built | Why at this point |
 |---|---|---|
-| 0 | App shell (Flutter), local storage (SQLite), C1 pairing, reconnection and removal, capabilities, feature switches (C11 SEC-1, SEC-2) | Every feature needs a trusted connection and the switches |
-| 1 | C3 file lists and their sync, C5 name search, C6 file sharing, C8 clipboard | Need no AI and no native capture; they prove the trusted connection carries real data |
-| 2 | C4 exact and "same photo" duplicates with safe delete; C11 delete permission and log | Builds on the C3 lists; no AI needed |
-| 3 | C2 AI device, C4 similar photos, C5 search by meaning | Heaviest part (models, previews, about 2 h first build) |
-| 4 | C9 screen sharing, then C10 extra screen (same WebRTC stream), C7 vault | Need native code per system and the most "not checked" points |
+| 0 | The app shell (Flutter), local storage (SQLite), Device Discovery, Pairing and Trust (pairing, reconnection and removal, device capabilities), and the feature switches of Security and Privacy | Every feature needs a trusted connection and the switches |
+| 1 | File Indexing and Offline-Device Records (file lists and their synchronisation), Unified Search by name, Direct File Sharing, Clipboard Synchronisation | They need no AI and no native screen capture, and they prove that the trusted connection carries real data |
+| 2 | Duplicate File Detection for exact copies and "same photo" copies, with safe deletion; the delete permission and deletion log of Security and Privacy | Builds on the file lists; needs no AI |
+| 3 | AI Analysis on the AI device, Duplicate File Detection for similar photos, Unified Search by meaning | The heaviest part (models, previews, and a first build of about two hours) |
+| 4 | Screen Sharing and Remote Control, then Extra Screen (the same WebRTC stream), then Password Management | These need native code for each system and have the most points still to verify |
 
-## 2. Per feature: built first, devices, test data, success
+## 3. Which systems can be tested
 
-Devices: **W** = Windows PC/laptop, **A** = Android phone, **T** = Android tablet, **L** = Linux (see section 4), **M/i** = Mac, iPhone, iPad (not available, section 4).
+No member of the team has a Mac or a Linux machine. The tool is designed for five systems, but it will **not** be tested on all five. The table below states what is tested, what is not, and how each untested part is checked instead.
 
-| Feature | Built first | Devices | Test data | Success criterion (source) |
+| System | Tested in Phase 2? | How it is tested, or how it is checked instead |
+|---|---|---|
+| **Windows** | **Tested** | On the team's own Windows PCs and laptops. Windows and Android are the main pair for the prototype: every feature in section 4 is tested on them. |
+| **Android** (phone and tablet) | **Tested** | On the team's own phones and tablets. Remote control of Android is tested only after the accessibility service is turned on. Which models the team has, and whether one runs the minimum version (Android 7), is still to be collected. |
+| **Linux** | **Tested in part** | Only on Ubuntu 24.04 (GNOME on Wayland), started from a USB stick or a second partition on a team member's Windows PC. A virtual machine is not used for the Wayland and network tests, because its system dialogs and network may behave differently. Linux on X11 and other desktops (KDE, Sway) are not tested; they are checked by review of the documentation and the design. |
+| **macOS** | **Not tested** | Apps for Apple systems can only be built on a Mac with Xcode, which the team does not have. Checked instead by review of Apple's documentation and of the design. |
+| **iPhone and iPad** | **Not tested** | Cannot be built or tested without a Mac. Checked instead by review of Apple's documentation and of the design. This covers the iPad as an extra screen, screen sharing from an iPhone or iPad, writing clipboard items as "local only", password AutoFill and every Apple system sign. |
+
+In the report, every result names the system on which it was measured, and a feature that ran only on Windows and Android is never described as tested on all five systems. If a Mac becomes available (for example in a university laboratory), the Apple parts are added to the tests; until then they remain design only.
+
+## 4. Tests for each feature
+
+Devices: **W** = Windows PC or laptop, **A** = Android phone, **T** = Android tablet, **L** = Ubuntu 24.04 from a USB stick or second partition. macOS, iPhone and iPad are not available (section 3).
+
+| Feature | Built first | Devices | Test data | Success criterion |
 |---|---|---|---|---|
-| C1 Pairing | QR pairing W–A, then code comparison W–W (laptop without camera) | W, A, L | Two to four devices; a test relay for the code route | All 22 tests of C1 §6 pass; pairing ≤ 5 taps and < 60 s with 5 volunteers; reconnection < 3 s; offline mark ≤ 40 s; codes differ in 1,000 relay runs (NFR-5, NFR-13, NFR-14, NFR-33) |
-| C3 Lists | Scan of own folders, then "changes after number N" | W, A, L | 100,000 made-up files and folders (as in C3's own measurement) plus real home folders | List ≤ 30 MB per 100,000 files; catch-up sends only the missing changes; offline list shows its date; scan time measured and a target set (NFR-12, NFR-20, FR-27) |
-| C5 Search | Name search with the cleaned Arabic copy, then filters | A (minimum phone), W | 400,000 names incl. Arabic names with vowel marks and alef/ya/ta forms | Results ≤ 0.5 s while typing; every Arabic test pair found; works with all other devices off; trigram tokenizer present in the Dart package's SQLite (NFR-10, NFR-37, C5 open point 3) |
-| C6 File sharing | One file W→A, then resume | W, A, T | Files of 1 KB, 100 MB, 2 GB; Wi-Fi cut mid-transfer; a file the receiver already has | Resumes with only missing chunks; final fingerprint matches; nothing overwritten; "You already have this file" shown; speed measured (NFR-15, FR-47 to FR-50) |
-| C8 Clipboard | Text W↔W, then "Send clipboard" on Android | W, A | Text of 10 B, 1 MB and 1 MB + 1 B; 10 MB image; a password copied from C7 | Over-limit refused with the message; secret items never sent (0 in a capture); nothing stored; delay measured, ≤ 1 s suggested (FR-58 to FR-64, NFR-16) |
-| C4 Duplicates | Exact copies by size and hashes, then perceptual hash, then safe delete | W, A | Own photo set [PROPOSAL: about 1,000 photos with hand-labelled copies: resized, cropped, edited, burst shots] plus exact copies of mixed files | All exact copies found, no false exact copy; thresholds 5 and 0.90 tuned on our photos and precision and recall reported; delete never removes the last copy (keep-copy device off → nothing deleted); trash works on Windows from Flutter (C4 Phase 2 tests) |
-| C2 AI device | Model run on W, preview request from A | W (4 cores, 8 GB) | 100,000 photos (a public photo set: which one and its licence not checked) | First build time measured and compared with the 2 h estimate; memory stays under 8 GB; "AI paused" shown when W is off; role moves to a second W (NFR-11, NFR-22, FR-19 to FR-22) |
-| C5 by meaning | Name vectors on W, then photo search by words | W, A | 50 English and 50 Arabic queries with expected results [PROPOSAL] | Arabic photo search measured against the same English queries (no target yet); query not stored (NFR-3, NFR-38) |
-| C9 Screen sharing | View W→A, then control A→W | W, A, L | Desktop, a video playing, a window run as administrator (cannot be controlled, C9 §1) | Approval every time; Stop ≤ 1 s; picture ≤ 5 s; delay < 200 ms; 1080p at 30 fps; works with no internet; Android control only after the accessibility service (NFR-17, NFR-24, C9 open points) |
-| C10 Extra screen | Mirror W→T first (no driver), then extend with the Windows driver | W, T, L (Wayland) | Desktop use: drag a window, type, play a video | Mirror works everywhere it is promised; extend on W (test-signed driver on our test PC) and Linux Wayland GNOME or KDE; delay < 100 ms; virtual screen removed at the end (NFR-18, FR-72 to FR-78) |
-| C7 Vault | Vault on W, then sync to A | W, A | Test logins; a Chrome CSV export | Unlock ≤ about 1 s on the minimum phone; locks after 5 min; both versions kept on conflict; CSV import (NFR-19, FR-52 to FR-57) |
-| C11 Security | Switches and checks (stage 0), database encryption (stage 2) | all | Fresh install; a device with a feature off; traffic capture | Everything off on a fresh install; feature data refused when its switch is off; 0 packets outside the local network; no previews, clipboard items or frames stored; encryption speed cost measured (NFR-1, NFR-2, NFR-7) |
+| Device Discovery, Pairing and Trust | Pairing with a QR code between W and A, then pairing by comparing codes between two W (a laptop without a camera) | W, A, L | Two to four devices; a test relay for the code route | All 22 tests of the pairing design pass; pairing takes 5 taps or fewer and under 60 seconds with 5 volunteers; reconnection under 3 seconds; a device is marked offline within 40 seconds; codes differ in 1,000 relay runs (NFR-5, NFR-13, NFR-14, NFR-33) |
+| File Indexing and Offline-Device Records | Scan of the user's own folders, then "changes after number N" | W, A, L | 100,000 generated files and folders, as in the design's own measurement, plus real home folders | A list takes 30 MB or less per 100,000 files; catching up sends only the missing changes; an offline device's list shows its date; the scan time is measured and a target is set (NFR-12, NFR-20, FR-27) |
+| Unified Search | Search by name with the cleaned Arabic copy of each name, then the filters | A (minimum phone), W | 400,000 names, including Arabic names with vowel marks and different forms of alef, ya and ta marbuta | Results appear within 0.5 seconds while typing; every Arabic test pair is found; search works with all other devices off; the trigram tokenizer is present in the SQLite of the Dart package (NFR-10, NFR-37) |
+| Direct File Sharing | One file from W to A, then resuming | W, A, T | Files of 1 KB, 100 MB and 2 GB; Wi-Fi cut during a transfer; a file the receiver already has | The transfer resumes with only the missing parts; the final fingerprint matches; nothing is overwritten; "You already have this file" is shown; the speed is measured (NFR-15, FR-47 to FR-50) |
+| Clipboard Synchronisation | Text between two W, then "Send clipboard" on Android | W, A, L | Text of 10 B, 1 MB and 1 MB + 1 B; a 10 MB image; a password copied from Password Management | Items over the limit are refused with the message; secret items are never sent (none in a network capture); nothing is stored; the delay is measured, with 1 second or less suggested (FR-58 to FR-64, NFR-16) |
+| Duplicate File Detection | Exact copies by size and fingerprint, then similar photos, then safe deletion | W, A | About 1,000 of the team's own photos with hand-labelled copies (resized, cropped, edited, burst shots), plus exact copies of mixed files | All exact copies are found, with no false exact copy; the thresholds 5 and 0.90 are tuned on these photos and precision and recall are reported; deletion never removes the last copy (if the device holding the kept copy is off, nothing is deleted); moving to the recycle bin works on Windows from Flutter |
+| AI Analysis | The model runs on W, then a preview request from A | W (4 cores, 8 GB of memory) | 100,000 photos from a public photo set (the set and its licence are still to be chosen) | The first build time is measured and compared with the estimate of two hours; memory stays under 8 GB; "AI paused" is shown when W is off; the AI role moves to a second W (NFR-11, NFR-22, FR-19 to FR-22) |
+| Unified Search by meaning | Name vectors on W, then photo search by words | W, A | 50 English and 50 Arabic queries with expected results | Arabic photo search is measured against the same English queries (no target yet); the query is not stored (NFR-3, NFR-38) |
+| Screen Sharing and Remote Control | Viewing from W to A, then control from A to W | W, A, L | The desktop, a video playing, and a window run as administrator (which cannot be controlled) | Approval every time; Stop within 1 second; the picture appears within 5 seconds; delay under 200 ms; 1920 × 1080 at 30 frames per second; works without internet; Android is controlled only after the accessibility service is turned on (NFR-17, NFR-24) |
+| Extra Screen | Mirroring from W to T first (no driver), then a true extra screen with the Windows driver | W, T, L | Desktop use: dragging a window, typing, playing a video | Mirroring works wherever it is promised; a true extra screen works on W (with a test-signed driver on the team's test PC) and on L (GNOME on Wayland); approval is asked on both devices every time; the delay is under 100 ms; the virtual screen is removed at the end (NFR-18, FR-72 to FR-78). macOS (mirroring only) and the iPad as screen device are checked by review only (section 3). |
+| Password Management | The vault on W, then synchronisation to A | W, A | Test logins; a password export from Chrome (CSV) | Unlocking takes about 1 second or less on the minimum phone; the vault locks after 5 minutes; both versions are kept on a conflict; CSV import works (NFR-19, FR-52 to FR-57) |
+| Security and Privacy | The switches and checks (stage 0), then encryption of the main database (stage 2) | W, A, L | A fresh installation; a device with a feature turned off; a network capture | Everything is off on a fresh installation; data for a feature is refused when its switch is off; no packet leaves the local network; no previews, clipboard items or screen pictures are stored; the speed cost of encryption is measured (NFR-1, NFR-2, NFR-7) |
 
-## 3. Risks: what could fail and the fallback
+## 5. Risks and fallbacks
 
-From the "not checked" and "still open" points of all designs.
+The risks below come from the points that the feature designs have not yet verified or have left open.
 
-| # | Risk | From | Fallback |
-|---|---|---|---|
-| 1 | No Dart package does ECDSA signing on all five systems, or the client-key proof fails | C1 §9, B6 §4 | Native plugin for signing; the in-channel proof stays the design |
-| 2 | mDNS (Bonsoir) fails on a system or the Wi-Fi blocks it | C1 §1.8, B6 §4 | QR with address, typed address (FR-15) |
-| 3 | WebRTC does not work with no internet, or adds too much app size | B6 §4, C9 open point 1 | Own TLS stream with compressed frames (C9 §3), slower |
-| 4 | Windows virtual-screen driver cannot be signed for users: a public release needs an EV certificate and Microsoft attestation/HLK signing | C10 §1 and open points | Phase 2: a test-signed driver on our own test PC (test-signing mode); otherwise and for other users, Windows gets mirror only (C10 §4) |
-| 5 | Linux desktop does not offer the portal `VIRTUAL` source: in GNOME and KDE portals, not in wlroots (Sway); X11 has no such source | C10 §1, §4 | Mirror on wlroots desktops and X11 |
-| 6 | First AI build much slower than 2 h on ONNX Runtime | C2 still open, B6 point 2 | Run while plugged in and idle, in batches; 16-bit vectors; start with the newest photos |
-| 7 | Arabic photo search is weak | B6 point 5, C5 open point 4 | Say so in the app; Arabic name search (FTS) still works; try another model in Phase 2 |
-| 8 | Thresholds 5 and 0.90 give wrong groups | C4 Phase 2 tests | Tune on our photos; similar groups are only suggestions and every delete needs the user |
-| 9 | Taking video frames fails on phones | C2, C4 | Phones offer exact video copies only |
-| 10 | Android Low Power Standby or makers' battery managers stop "stay connected" | B6 point 3 | Android works like iPhone: only while the app is open |
-| 11 | Android: no photos without "All files access"; iOS forgets picked folders | C3 open points 2, 3 | Media library only; ask again for the folder; tell the user the scan scope |
-| 12 | Google Play refuses the accessibility service for control | C9 open point 8 | Android view-only in a store build; control only in test builds |
-| 13 | Trigram tokenizer missing in the Dart package's SQLite | C5 open point 3 | Normal tokenizer on the cleaned names plus prefix search |
-| 14 | Argon2id with 64 MiB takes over 1 s on phones | C7 Phase 2 tests | 32 MiB (Bitwarden's default), still above OWASP's minimum |
-| 15 | Encrypting the main database slows search or sync | C11 Phase 2 tests | Decide K1 with the measurement: encrypt or keep B6's no-key choice |
-| 16 | No trash access from Flutter on desktops | C4 Phase 2 tests | Native call; or permanent delete with a second confirmation |
-| 17 | macOS and iOS points stay unchecked (indicators, Accessibility for events, broadcast limits) | C9 open points 6, 7; C10 | Stay design only, marked "not tested" in the report |
-| 18 | Team time and learning Dart | B6 choice 2 | The build order in section 1: each stage is a demo on its own |
+| # | Risk | Fallback |
+|---|---|---|
+| 1 | No Dart package performs ECDSA signing on all five systems, or the proof with the client key fails | A native plugin for signing; the proof inside the encrypted channel stays as designed |
+| 2 | Device discovery (mDNS, Bonsoir) fails on a system, or the Wi-Fi blocks it | A QR code with the address, or a typed address (FR-15) |
+| 3 | WebRTC does not work without internet, or makes the app too large | The tool's own encrypted stream with compressed frames; simpler but slower |
+| 4 | The Windows display driver for Extra Screen cannot be signed for the public: a public release needs an EV certificate and Microsoft signing | Phase 2 uses a test-signed driver on the team's own test PC; other Windows PCs get mirroring only |
+| 5 | A Linux desktop does not offer the virtual monitor: GNOME and KDE do, Sway and other wlroots desktops do not, and X11 has no such source | Mirroring on wlroots desktops and X11 |
+| 6 | The first AI build is much slower than two hours with ONNX Runtime | Run only while plugged in and idle, in batches; store vectors at 16 bits; start with the newest photos |
+| 7 | Search for photos with Arabic words gives weak results | Say so in the app; Arabic search by name still works; try another model in Phase 2 |
+| 8 | The thresholds 5 and 0.90 group the wrong photos | Tune them on the team's photos; similar groups are only suggestions, and every deletion needs the user |
+| 9 | Taking frames from videos fails on phones | Phones offer only exact copies of videos |
+| 10 | Android's Low Power Standby or a maker's battery manager stops the background connection | Android works like the iPhone: only while the app is open |
+| 11 | Android gives no photos without "All files access", or iOS forgets folders the user picked | Use the media library only; ask for the folder again; tell the user what is scanned |
+| 12 | Google Play refuses the accessibility service for remote control | Android is view-only in a store build; control only in test builds |
+| 13 | The trigram tokenizer is missing in the SQLite of the Dart package | The normal tokenizer on the cleaned names, plus search by prefix |
+| 14 | Argon2id with 64 MiB of memory takes over 1 second on phones | 32 MiB (Bitwarden's default), still above OWASP's minimum |
+| 15 | Encrypting the main database slows search or synchronisation | Measure the cost and report it; keep the encryption, which is the settled security decision, and tune the database settings |
+| 16 | Flutter on computers cannot reach the recycle bin | A native call, or permanent deletion with a second confirmation |
+| 17 | Apple points cannot be tested without a Mac (system signs, the permission for control on macOS, broadcast limits on iPhone and iPad) | They remain design only, checked by review, and are marked "not tested" in the report (section 3) |
+| 18 | Team time, and learning Dart | The build order in section 2: each stage is a demonstration on its own |
 
-## 4. Which systems the prototype will really run on
+## 6. What counts as success for Phase 2
 
-Nobody in the team has a Mac or a Linux machine (B6 §4, B1 decision 15). What that means:
+1. Stages 0 to 2 work on Windows and Android and meet the criteria in section 4 for Device Discovery, Pairing and Trust; File Indexing and Offline-Device Records; Unified Search; Direct File Sharing; Clipboard Synchronisation; and Duplicate File Detection.
+2. The first AI build and the Arabic queries are measured, even if they are slower or weaker than hoped, and the measured numbers replace the estimates in the designs and the non-functional requirements.
+3. Every non-functional requirement that has no number yet receives a measured number.
+4. Every risk that occurred is reported with the fallback that was used.
+5. Every result names the system it was measured on, and the parts that could not be tested are listed as such (section 3).
 
-- **Windows and Android: yes.** These are the main prototype pair: every feature in section 2 can be tested on them (Android control only with the accessibility service). Which Android phones and tablets the team has, and whether one is a "minimum phone" (Android 7): **not checked**, to collect from the team.
-- **Linux: possible without buying anything [PROPOSAL].** Ubuntu 24.04 from a live USB or a second partition on a team PC (B6 says "test on Ubuntu 24.04"). A virtual machine is easier but its Wayland portals and network may differ: **not checked**. Without this, every Linux claim (Wayland portals, `VIRTUAL`, Avahi) stays from the docs only.
-- **macOS, iPhone, iPad: no.** Flutter builds for Apple systems need a Mac with Xcode (B6 choice 1). Without one: no iOS or macOS build, so the iPad as extra screen (the main C10 example), ReplayKit sharing, iOS clipboard "local only", AutoFill and every Apple indicator stay **design only, not tested**. Ways to get one (a university Mac lab, borrowing a Mac, a rented cloud Mac): **not checked**, for Mahmoud to decide.
-- **In the report** every result must say on which system it was measured, and features that ran only on Windows and Android must not be described as tested on all five.
+## 7. Open points
 
-## 5. What counts as success for Phase 2 [PROPOSAL]
+| Point | Settled by |
+|---|---|
+| Accept the build order, and the stage that must work for the presentation | Project lead |
+| Which phones and tablets the team has, and whether any runs Android 7 | The team |
+| Access to a Mac for Apple builds; preparing the Ubuntu 24.04 USB stick | Project lead, the team |
+| The photo test set (the team's own photos or a public set, and its licence) and the query set | AI Analysis and Duplicate File Detection designs |
+| The suggested targets: clipboard delay of 1 second or less, 4 of 5 volunteers, about 1,000 test photos | The team |
+| Accept a test-signed driver for the Phase 2 test of Extra Screen on Windows, since public signing is out of reach | Project lead, Technology Choices |
 
-1. Stage 0 to 2 work on Windows and Android with the C1, C3, C5, C6, C8 and C4 criteria above.
-2. The AI first build and the Arabic queries are **measured**, even if slower or weaker than hoped, and the numbers replace the estimates in C2, B6 and A9.
-3. Every A9 line marked "no number yet" has a measured number.
-4. Every risk that happened is reported with the fallback that was used.
+## References
 
-## Open points and who settles them
+All files were read on 8 and 10 November 2026.
 
-| # | Point | Who | Status |
-|---|---|---|---|
-| 1 | Accept the build order and the stage that must work for the presentation | Mahmoud | [PROPOSAL] |
-| 2 | Which phones and tablets the team has; is any Android 7 | the team | not checked |
-| 3 | A Mac for Apple builds; a Linux live USB | Mahmoud, the team | still open |
-| 4 | The photo test set (own photos vs a public set and its licence) and the query set | Mohammed (C2, C4 with Ali) | not chosen |
-| 5 | Targets I suggested (clipboard ≤ 1 s, 4 of 5 volunteers, about 1,000 test photos) | the team | [PROPOSAL] |
-| 6 | Accept a test-signed driver for the Phase 2 Windows extend test (public signing is out of reach) | Mahmoud, Ali (B6) | C10 [PROPOSAL] |
-
-## Sources (all opened 8 Nov 2026)
-
-1. Phase 2 tests and open points in: `C2-ai-node.md`, `C3-file-indexing.md` §7, `C5-unified-search.md` §9 (Mohammed, on main); `C4-duplicate-detection.md` (pull request 43), `C7-password-management.md` (pull request 48), `C11-security-privacy.md` (pull request 49), `B6-technology-final.md` §4 (pull request 42) (Ali); `C1-device-discovery-pairing-trust.md` §6, §9 and `B1-architecture-v2.md` decision 15 (Mahmoud, pull request 38); `research/C6-file-sharing.md` §9 (Samer, on main).
-2. Ahmed: `C8-clipboard-sync.md` (pull request 39); `C9-screen-sharing.md` §6 and open points (branch `c9-final`), `C10-extra-screen.md` §1, §4 and open points (branch `c10-extra-screen`).
-3. `A8-functional-requirements.md` and `A9-non-functional-requirements.md` (this round).
-4. Mahmoud, round-3 task card (PDF, 3 Nov 2026), part B item 3.
+1. Project report, feature designs and their Phase 2 tests and open points: Device Discovery, Pairing and Trust; File Indexing and Offline-Device Records; Unified Search; Direct File Sharing; Duplicate File Detection; AI Analysis; Password Management; Security and Privacy; Clipboard Synchronisation; Screen Sharing and Remote Control; Extra Screen.
+2. Project report: Architecture (the open point on a Mac for Apple builds); Technology Choices, final version (Flutter, the Ubuntu 24.04 test desktop, open technical tests).
+3. Project report: Requirements for Chapter 3 and the requirements appendix (FR-n and NFR-n).
