@@ -1,0 +1,223 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Device Discovery, Pairing and Trust: removing a lost device" id="Device-Discovery,-Pa">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1295" pageHeight="842">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="90" as="sourcePoint" />
+            <mxPoint x="105.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="User" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335.0" y="90" as="sourcePoint" />
+            <mxPoint x="335.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="This device&lt;br&gt;(where the user removes)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565.0" y="90" as="sourcePoint" />
+            <mxPoint x="565.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="Paired device&lt;br&gt;(online)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="480.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795.0" y="90" as="sourcePoint" />
+            <mxPoint x="795.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Paired device&lt;br&gt;(switched off)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="710.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="90" as="sourcePoint" />
+            <mxPoint x="1025.0" y="822" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Lost device" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#f8cecc;strokeColor=#b85450;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="940.0" y="32" width="170" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=none;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="612" width="1110.0" height="182" as="geometry" />
+        </mxCell>
+        <mxCell id="13" value="alt" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="612" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="[the lost device reaches it before it met any other paired device]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="612" width="1050.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="15" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#888888;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10.0" y="706" as="sourcePoint" />
+            <mxPoint x="1120.0" y="706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="16" value="else" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="706" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="17" value="[it met another paired device first]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="706" width="1050.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="Device Discovery, Pairing and Trust: removing a lost device" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2" width="1275" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="105.0" y="124" as="sourcePoint" />
+            <mxPoint x="335.0" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="20" value="1. &quot;Remove&quot; the lost device, confirms the warning" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="68" y="108" width="304" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335.0" y="158" as="sourcePoint" />
+            <mxPoint x="1025.0" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="2. close the live connection (if any)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="565" y="142" width="229" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335.0" y="192" as="sourcePoint" />
+            <mxPoint x="339.0" y="208" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="371.0" y="192" />
+              <mxPoint x="371.0" y="208" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="24" value="3. delete its certificate,&lt;br&gt;write a permanent removal record" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="377" y="186" width="198" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335.0" y="248" as="sourcePoint" />
+            <mxPoint x="565.0" y="248" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="4. remove the lost device (paired connection)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="310" y="232" width="279" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565.0" y="282" as="sourcePoint" />
+            <mxPoint x="569.0" y="298" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="601.0" y="282" />
+              <mxPoint x="601.0" y="298" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="5. write the removal record, close the&lt;br&gt;connection, show a notice" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="607" y="276" width="236" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="Switched off: hears nothing now" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="685.0" y="330" width="220" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="30" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="388" as="sourcePoint" />
+            <mxPoint x="565.0" y="388" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="31" value="6. later, tries to connect" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="714" y="372" width="161" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="32" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="565.0" y="422" as="sourcePoint" />
+            <mxPoint x="1025.0" y="422" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="33" value="7. refused (&quot;not trusted&quot;)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="714" y="406" width="161" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="34" value="Later the switched-off device starts" style="html=1;whiteSpace=wrap;fontSize=9;fillColor=#fff2cc;strokeColor=#d6b656;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="685.0" y="448" width="220" height="32" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795.0" y="506" as="sourcePoint" />
+            <mxPoint x="335.0" y="506" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="8. normal reconnection" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="497" y="490" width="136" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="335.0" y="540" as="sourcePoint" />
+            <mxPoint x="795.0" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="9. exchange removal lists; the lost device is missing" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="401" y="524" width="329" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795.0" y="574" as="sourcePoint" />
+            <mxPoint x="799.0" y="590" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="831.0" y="574" />
+              <mxPoint x="831.0" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="10. write the removal record" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="837" y="575" width="174" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="642" as="sourcePoint" />
+            <mxPoint x="795.0" y="642" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="11. tries to connect" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="848" y="626" width="124" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795.0" y="676" as="sourcePoint" />
+            <mxPoint x="1025.0" y="676" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="12. still trusted here, accepted (the open risk)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="761" y="660" width="298" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="736" as="sourcePoint" />
+            <mxPoint x="795.0" y="736" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="13. tries to connect" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="848" y="720" width="124" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="795.0" y="770" as="sourcePoint" />
+            <mxPoint x="1025.0" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="48" value="14. refused (&quot;not trusted&quot;)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="826" y="754" width="167" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

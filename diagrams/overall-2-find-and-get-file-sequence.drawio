@@ -1,0 +1,281 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Overall: finding a file on another device and getting it (on the phone)" id="Overall:-finding-a-f">
+    <mxGraphModel dx="1000" dy="800" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1665" pageHeight="882">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="90" as="sourcePoint" />
+            <mxPoint x="100.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="3" value="User" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#ffffff;strokeColor=#000000;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="20.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="90" as="sourcePoint" />
+            <mxPoint x="285.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="5" value="User interface" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="205.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="90" as="sourcePoint" />
+            <mxPoint x="470.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7" value="Feature module" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="390.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="90" as="sourcePoint" />
+            <mxPoint x="655.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9" value="Core services" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="10" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="90" as="sourcePoint" />
+            <mxPoint x="840.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="Communication layer" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="760.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="12" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="90" as="sourcePoint" />
+            <mxPoint x="1025.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="Local storage" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="945.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="14" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1210.0" y="90" as="sourcePoint" />
+            <mxPoint x="1210.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="15" value="Operating system" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1130.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="16" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#999999;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="90" as="sourcePoint" />
+            <mxPoint x="1395.0" y="862" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="17" value="Paired device&lt;br&gt;(laptop)" style="html=1;whiteSpace=wrap;fontSize=10;fontStyle=1;fillColor=#d5e8d4;strokeColor=#82b366;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1315.0" y="32" width="160" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="18" value="" style="html=1;whiteSpace=wrap;fontSize=11;fillColor=none;strokeColor=#666666;align=center;verticalAlign=middle;dashed=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="372" width="1475.0" height="462" as="geometry" />
+        </mxCell>
+        <mxCell id="19" value="alt" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="372" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="20" value="[laptop is off]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="372" width="1415.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="21" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#888888;endArrow=none;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10.0" y="432" as="sourcePoint" />
+            <mxPoint x="1485.0" y="432" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="22" value="else" style="html=1;whiteSpace=wrap;fontSize=9;fontStyle=1;fillColor=#f5f5f5;strokeColor=#666666;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="10.0" y="432" width="46" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="23" value="[laptop is on]" style="html=1;whiteSpace=wrap;fontSize=9;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="62.0" y="432" width="1415.0" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="24" value="Overall: finding a file on another device and getting it (on the phone)" style="html=1;whiteSpace=wrap;fontSize=13;fontStyle=1;text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="10" y="2" width="1645" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="25" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="124" as="sourcePoint" />
+            <mxPoint x="285.0" y="124" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="26" value="1. types &quot;invoice&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="137" y="108" width="112" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="27" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="158" as="sourcePoint" />
+            <mxPoint x="470.0" y="158" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="28" value="2. search" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="348" y="142" width="60" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="29" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="192" as="sourcePoint" />
+            <mxPoint x="1025.0" y="192" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="30" value="3. name search in all file lists" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="648" y="176" width="198" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="31" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1025.0" y="226" as="sourcePoint" />
+            <mxPoint x="470.0" y="226" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="32" value="4. matches, device, online or offline, age" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="617" y="210" width="260" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="33" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="260" as="sourcePoint" />
+            <mxPoint x="285.0" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="34" value="5. &quot;Name matches&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="325" y="244" width="105" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="35" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="294" as="sourcePoint" />
+            <mxPoint x="285.0" y="294" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="36" value="6. taps &quot;invoice.pdf, Laptop&quot;, then &quot;Open&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="62" y="278" width="260" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="37" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="342" as="sourcePoint" />
+            <mxPoint x="655.0" y="342" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="38" value="7. laptop online and paired?&lt;br&gt;Direct File Sharing on?" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="476" y="312" width="174" height="28" as="geometry" />
+        </mxCell>
+        <mxCell id="39" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="402" as="sourcePoint" />
+            <mxPoint x="100.0" y="402" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="40" value="8. &quot;Turn on Laptop to use this file&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="81" y="386" width="223" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="41" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="655.0" y="462" as="sourcePoint" />
+            <mxPoint x="840.0" y="462" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="42" value="9. ask the laptop to send the file" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="642" y="446" width="211" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="43" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="496" as="sourcePoint" />
+            <mxPoint x="1395.0" y="496" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="44" value="10. request" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1083" y="480" width="68" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="45" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="530" as="sourcePoint" />
+            <mxPoint x="840.0" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="46" value="11. offer: name, size, fingerprint" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1012" y="514" width="211" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="47" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="564" as="sourcePoint" />
+            <mxPoint x="100.0" y="564" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="48" value="12. &quot;Laptop wants to send invoice.pdf (2 MB). Accept?&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="25" y="548" width="335" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="49" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100.0" y="598" as="sourcePoint" />
+            <mxPoint x="285.0" y="598" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="50" value="13. &quot;Accept&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="155" y="582" width="74" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="51" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="632" as="sourcePoint" />
+            <mxPoint x="1395.0" y="632" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="52" value="14. accepted" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="616" width="74" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="53" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1395.0" y="666" as="sourcePoint" />
+            <mxPoint x="840.0" y="666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="54" value="15. file in chunks (file connection)" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1006" y="650" width="223" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="55" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="840.0" y="700" as="sourcePoint" />
+            <mxPoint x="470.0" y="700" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="56" value="16. chunks" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="624" y="684" width="62" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="57" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="734" as="sourcePoint" />
+            <mxPoint x="474.0" y="750" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="506.0" y="734" />
+              <mxPoint x="506.0" y="750" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="58" value="17. fingerprint matches?" style="text;html=1;fontSize=9;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="512" y="735" width="149" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="59" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="470.0" y="776" as="sourcePoint" />
+            <mxPoint x="1210.0" y="776" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="60" value="18. save the file" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="787" y="760" width="105" height="14" as="geometry" />
+        </mxCell>
+        <mxCell id="61" value="" style="html=1;fontSize=9;rounded=0;strokeColor=#000000;endArrow=block;endFill=1;dashed=1;labelBackgroundColor=#ffffff;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="285.0" y="810" as="sourcePoint" />
+            <mxPoint x="100.0" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="62" value="19. &quot;Received. Open&quot;" style="text;html=1;fontSize=9;align=center;verticalAlign=middle;labelBackgroundColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="130" y="794" width="124" height="14" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
