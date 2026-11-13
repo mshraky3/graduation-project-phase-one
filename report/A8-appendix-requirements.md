@@ -68,7 +68,7 @@ Numbers such as time limits, sizes and similarity thresholds are design targets.
 | FR-32 | find resized copies of a photo with its perceptual fingerprint (a difference of 5 or less), without the AI device | Duplicate File Detection |
 | FR-33 | find similar photos on the AI device (a similarity of 0.90 or more), and similar videos from 3 frames of each video | Duplicate File Detection |
 | FR-34 | show duplicate groups as "exact", "same photo" or "similar", on one or several devices, with the storage space that can be freed; and show a match that still needs a missing fingerprint as "possible" | Duplicate File Detection |
-| FR-35 | delete a file only on the device that holds it, and only after the user has confirmed, the owner of that device has allowed deletions from the asking device, the file has been fingerprinted again and the kept copy has been found to still exist; never delete the last copy; and record every deletion in a log kept for 30 days | Duplicate File Detection |
+| FR-35 | delete a file only on the device that holds it, and only after the user has confirmed, the owner of that device has allowed deletions from the asking device (either by turning on the allow option for that device beforehand, or by accepting the request on their own device), the file has been fingerprinted again and the kept copy has been found to still exist; never delete the last copy; and record every deletion in a log kept for 30 days | Duplicate File Detection |
 | FR-36 | move deleted files to the system's trash or recycle bin where the system has one | Duplicate File Detection |
 | FR-37 | share the list of ignored groups between devices, so that a group the user has ignored does not appear again on any device | Duplicate File Detection |
 

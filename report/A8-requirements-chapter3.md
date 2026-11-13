@@ -34,7 +34,7 @@ In this section, a *paired device* is a device that the user has joined to the t
 
 **F8.** The tool must find exact copies of a file across all paired devices, and resized copies of a photo, and must show them in groups together with the storage space that can be freed.
 
-**F9.** The tool must delete a duplicate file only on the device that holds it, only after the user has confirmed the deletion and the owner of that device has allowed deletions, and must never delete the last remaining copy of a file.
+**F9.** The tool must delete a duplicate file only on the device that holds it, only after the user has confirmed the deletion and the owner of that device has allowed deletions, either by turning on the allow option for the asking device or by accepting the request on their own device, and must never delete the last remaining copy of a file.
 
 ### AI Analysis (on the AI device)
 
